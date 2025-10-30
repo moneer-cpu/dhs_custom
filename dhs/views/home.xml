@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- تعريف الصفحة باسم home -->
+    <template id="home_page_template" name="Home Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure">
+
+                <!-- Hero Section -->
+                <div class="th-hero-wrapper hero-2 oe_structure" id="hero" data-bg-src="/dhs/static/src/img/hero/hero_bg_2_1.jpg">
+                    <div class="hero-inner">
+                        <div class="container">
+                            <div class="hero-style2">
+                                <span class="sub-title">
+                                    <img src="/dhs/static/src/img/theme-img/title_icon.svg" alt="shape"/>24/7 Emergency
+                                    Service
+                                </span>
+                                <h1 class="hero-title2">
+                                    <span class="title1 oe_inline">Caring for
+                                        <span class="line-text oe_inline">Health</span>
+                                    </span>
+                                    <span class="title2 oe_inline">Caring for You</span>
+                                </h1>
+                                <p class="hero-text oe_inline">
+                                    A brief statement outlining the purpose and mission of the clinic.
+                                    This can include the commitment to patient care, community health.
+                                </p>
+                                <div class="btn-group justify-content-center">
+                                    <a href="/about" class="th-btn oe_inline">Discover More</a>
+                                    <a href="/service" class="th-btn style4 oe_inline">See All Services</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-img">
+                            <img src="/dhs/static/src/img/hero/hero_2_1.png" alt="Image" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                        </div>
+                        <div class="hero-shape1">
+                            <img src="/dhs/static/src/img/hero/hero_shape_2_1.svg" alt="shape" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                        </div>
+                        <div class="hero-shape2">
+                            <img src="/dhs/static/src/img/hero/hero_shape_2_2.svg" alt="shape" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                        </div>
+                        <div class="hero-shape3">
+                            <img src="/dhs/static/src/img/hero/hero_shape_2_3.svg" alt="shape" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                        </div>
+                        <div class="hero-shape4">
+                            <img src="/dhs/static/src/img/hero/hero_shape_2_4.svg" alt="shape" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                        </div>
+                        <div class="hero-shape5">
+                            <img src="/dhs/static/src/img/hero/hero_shape_2_5.svg" alt="shape" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- About Section -->
+                <div class="space" id="about-sec">
+                    <div class="shape-mockup" data-top="0" data-right="0">
+                        <img src="/dhs/static/src/img/shape/pattern_shape_1.png" alt="shape" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                    </div>
+                    <div class="shape-mockup jump" data-bottom="10%" data-right="3%">
+                        <img src="/dhs/static/src/img/shape/medicine_1.png" alt="shape" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                    </div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6 mb-30 mb-xl-0">
+                                <div class="img-box1">
+                                    <div class="img1">
+                                        <img src="/dhs/static/src/img/normal/about_1_3.png" alt="About" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                    </div>
+                                    <div class="about-info">
+                                        <h3 class="box-title">Dr. Esita Jabed</h3>
+                                        <p class="box-text oe_inline">Mention the languages
+                                            <br/>
+                                            in which the staff.
+                                        </p>
+                                        <div class="box-review">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                        </div>
+                                        <a href="tel:+16356478965" class="box-link oe_inline">
+                                            <i class="fa-solid fa-phone"></i>
+                                            +163 564 78965
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="ps-xxl-4 ms-xl-2 text-center text-xl-start">
+                                    <div class="title-area mb-32">
+                                        <span class="sub-title">
+                                            <img src="/dhs/static/src/img/theme-img/title_icon.svg" alt="shape" class="oe_in_edit_mode" data-mimetype="image/png"/>About
+                                            Us Company
+                                        </span>
+                                        <h2 class="sec-title">Affordable Health Care Solutions</h2>
+                                        <p class="sec-text oe_inline">
+                                            A brief statement outlining the purpose and mission of the clinic.
+                                            This can include the commitment to patient care, community health,
+                                            and any specifical goals for our values.
+                                        </p>
+                                    </div>
+                                    <div class="mb-30 mt-n1">
+                                        <div class="checklist style2 list-two-column">
+                                            <ul>
+                                                <li>
+                                                    <i class="fas fa-heart-pulse"></i>
+                                                    Medical Professionals
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-heart-pulse"></i>
+                                                    Facilities and Equipment
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-heart-pulse"></i>
+                                                    Emergency Care
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-heart-pulse"></i>
+                                                    Medical Consulting
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-heart-pulse"></i>
+                                                    Services Offered
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-heart-pulse"></i>
+                                                    Specializations
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a href="/about" class="th-btn oe_inline">More About Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Section -->
+                <section class="overflow-hidden bg-smoke space" id="service-sec"
+                         data-bg-src="/dhs/static/src/img/bg/service_bg_1.png">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-8">
+                                <div class="title-area text-center">
+                                    <span class="sub-title">
+                                        <img src="/dhs/static/src/img/theme-img/title_icon.svg" alt="Icon" class="oe_in_edit_mode" data-mimetype="image/png"/>Our Services
+                                    </span>
+                                    <h2 class="sec-title">Our Mediax specialties Technical service</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gy-4 justify-content-center">
+                            <!-- Service Item 1 -->
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="service-card" data-bg-src="/dhs/static/src/img/service/service_card_1.jpg">
+                                    <div class="box-shape">
+                                        <img src="/dhs/static/src/img/bg/service_card_bg.png" alt="Service" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                    </div>
+                                    <div class="box-icon">
+                                        <img src="/dhs/static/src/img/icon/service_card_1.svg" alt="Icon" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                    </div>
+                                    <h3 class="box-title">
+                                        <a href="/service-details">Internal Medicine</a>
+                                    </h3>
+                                    <p class="box-text oe_inline">30+ Doctors</p>
+                                    <a href="/service-details" class="th-btn btn-sm style2 theme-color oe_inline">Read More</a>
+                                </div>
+                            </div>
+
+                            <!-- Service Item 2 -->
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="service-card" data-bg-src="/dhs/static/src/img/service/service_card_2.jpg">
+                                    <div class="box-shape">
+                                        <img src="/dhs/static/src/img/bg/service_card_bg.png" alt="Service" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                    </div>
+                                    <div class="box-icon">
+                                        <img src="/dhs/static/src/img/icon/service_card_2.svg" alt="Icon" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                    </div>
+                                    <h3 class="box-title">
+                                        <a href="/service-details">Dental Care</a>
+                                    </h3>
+                                    <p class="box-text oe_inline">20+ Doctors</p>
+                                    <a href="/service-details" class="th-btn btn-sm style2 theme-color oe_inline">Read More</a>
+                                </div>
+                            </div>
+
+                            <!-- باقي الخدمات بنفس النمط -->
+                            <!-- Service Item 3 -->
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="service-card" data-bg-src="/dhs/static/src/img/service/service_card_3.jpg">
+                                    <div class="box-shape">
+                                        <img src="/dhs/static/src/img/bg/service_card_bg.png" alt="Service" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                    </div>
+                                    <div class="box-icon">
+                                        <img src="/dhs/static/src/img/icon/service_card_3.svg" alt="Icon" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                    </div>
+                                    <h3 class="box-title">
+                                        <a href="/service-details">Urology Care</a>
+                                    </h3>
+                                    <p class="box-text oe_inline">20+ Doctors</p>
+                                    <a href="/service-details" class="th-btn btn-sm style2 theme-color oe_inline">Read More</a>
+                                </div>
+                            </div>
+
+                            <!-- Service Item 4 -->
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="service-card" data-bg-src="/dhs/static/src/img/service/service_card_4.jpg">
+                                    <div class="box-shape">
+                                        <img src="/dhs/static/src/img/bg/service_card_bg.png" alt="Service" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                    </div>
+                                    <div class="box-icon">
+                                        <img src="/dhs/static/src/img/icon/service_card_4.svg" alt="Icon" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                    </div>
+                                    <h3 class="box-title">
+                                        <a href="/service-details">Neurology Care</a>
+                                    </h3>
+                                    <p class="box-text oe_inline">10+ Doctors</p>
+                                    <a href="/service-details" class="th-btn btn-sm style2 theme-color oe_inline">Read More</a>
+                                </div>
+                            </div>
+
+                            <!-- باقي الخدمات (5-8) انسخ الكود وغير الصور/العناوين -->
+                        </div>
+
+                        <div class="mt-5 pt-2 space-extra-bottom">
+                            <p class="round-text oe_inline">
+                                <span class="text">You Get Our 20+ More services...
+                                    <a href="/service" class="line-btn oe_inline">Explore All Services</a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="overflow-hidden cta-sec4" data-bg-src="/dhs/static/src/img/bg/cta_bg_4.jpg">
+                    <div class="container z-index-common">
+                        <div class="row align-items-end justify-content-center text-center text-xl-start">
+                            <div class="col-xl-7 col-lg-9 space-extra">
+                                <div class="title-area mb-32">
+                                    <h2 class="sec-title text-white">We’re welcoming new patients and can’t wait to meet
+                                        you!
+                                    </h2>
+                                    <p class="sec-text text-white oe_inline">
+                                        A brief statement outlining the purpose and mission of the clinic.
+                                        This can include the commitment to patient care, community health, and any
+                                        specific goals or values.
+                                        Specify the types of medical services provided
+                                    </p>
+                                </div>
+                                <div class="btn-group justify-content-center">
+                                    <a href="/contactus" class="th-btn shadow-1 oe_inline">Book Appointment</a>
+                                    <a href="/contactus" class="th-btn style2 shadow-1 oe_inline">Get Free Consulting</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-5">
+                                <div class="img-box2">
+                                    <img src="/dhs/static/src/img/normal/cta_1.png" alt="image" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="overflow-hidden space">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 text-center text-xl-start">
+                                <div class="pe-xxl-5 mb-40 mb-xl-0">
+                                    <div class="title-area mb-32">
+                                        <span class="sub-title">
+                                            <img src="/dhs/static/src/img/theme-img/title_icon.svg" alt="shape" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                            Why Choose Us
+                                        </span>
+                                        <h2 class="sec-title">We Are Always Open For Your Health Services</h2>
+                                    </div>
+                                    <div class="choose-feature-wrap">
+                                        <div class="choose-feature">
+                                            <div class="box-number">01</div>
+                                            <div class="media-body">
+                                                <h3 class="box-title">Compassionate &amp; Expert Care</h3>
+                                                <p class="box-text oe_inline">
+                                                    Our team of dedicated healthcare professionals combines years of
+                                                    experience
+                                                    with a genuine commitment to providing.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="choose-feature">
+                                            <div class="box-number">02</div>
+                                            <div class="media-body">
+                                                <h3 class="box-title">Patient-Centered Approach</h3>
+                                                <p class="box-text oe_inline">
+                                                    Your health and well-being are our top priorities. We take the time
+                                                    to listen
+                                                    to your concerns, answer your questions.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="choose-feature">
+                                            <div class="box-number">03</div>
+                                            <div class="media-body">
+                                                <h3 class="box-title">Personalized Treatment Plans</h3>
+                                                <p class="box-text oe_inline">
+                                                    We understand that every patient is unique, and their healthcare
+                                                    needs may vary.
+                                                    That's why we create individualized treatment.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="img-box3">
+                                    <img src="/dhs/static/src/img/normal/why_1.jpg" alt="Why" class="oe_in_edit_mode" data-mimetype="image/png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </t>
+    </template>
+
+    <!-- تسجيل الصفحة في Odoo -->
+    <record id="home_page" model="website.page">
+        <field name="name">Home</field>
+        <field name="url">/dhs</field>
+        <field name="key">dhs.home_page_template</field>
+        <field name="view_id" ref="home_page_template"/>
+    </record>
+</odoo>
