@@ -6,5 +6,13 @@ class ResPartner(models.Model):
     nphies = fields.Char(string="Nphies Number")
     contract_no = fields.Char(string="Contract Number")
     cchi = fields.Char(string="CCHI")
+    region = fields.Selection([
+        ('central', 'Central region'),
+        ('northern', 'Northern region'),
+        ('western', 'Western region'),
+        ('eastern', 'Eastern region'),
+        ('southern', 'Southern Region'),
+    ], string="Region")
+
 
 

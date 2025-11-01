@@ -7,11 +7,14 @@
 
             <!-- إضافة الحقول بعد Reference -->
             <xpath expr="//field[@name='ref']" position="after">
-                <field name="nphies" modifiers='{"invisible": [["customer_rank", "=", 0]]}'/>
-                <field name="contract_no" modifiers='{"invisible": [["customer_rank", "=", 0]]}'/>
-                <field name="cchi" modifiers='{"invisible": [["customer_rank", "=", 0]]}'/>
+                <field name="nphies"/>
+                <field name="contract_no"/>
+                <field name="cchi"/>
+                <field name="region"/>
             </xpath>
-
+            <xpath expr="//field[@name='region']" position="attributes">
+                <attribute name="required">[('company_type', '=', True)]</attribute>
+            </xpath>
         </field>
     </record>
 </odoo>
