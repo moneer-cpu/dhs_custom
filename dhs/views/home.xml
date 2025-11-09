@@ -867,7 +867,7 @@
                 <!-- نهاية -->
 
                 <!-- بداية -->
-                <section class="blog-slider-section">
+                <!-- <section class="blog-slider-section">
                     <div class="container">
                         <div class="title-area text-center">
                             <span class="sub-title">
@@ -880,7 +880,7 @@
                         <div class="blog-slider">
                             <div class="slider-track">
                                 <!-- 4 بطاقات أصلية -->
-                                <div class="blog-card">
+                                <!-- <div class="blog-card">
                                     <img src="/dhs/static/src/img/blog/blog_1_1.jpg" alt="blog1"/>
                                     <h3>How Business Is Taking Over</h3>
                                 </div>
@@ -898,7 +898,7 @@
                                 </div>
 
                                 <!-- تكرار البطاقات للتحريك المستمر -->
-                                <div class="blog-card">
+                                <!-- <div class="blog-card">
                                     <img src="/dhs/static/src/img/blog/blog_1_1.jpg" alt="blog1"/>
                                     <h3>How Business Is Taking Over</h3>
                                 </div>
@@ -916,8 +916,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </div> -->
+                <!-- </section> --> 
                 <!-- نهاية -->
 
 
