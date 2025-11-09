@@ -13,8 +13,12 @@
     'website': 'https://',
     'depends': ['website'],
     'data': [
-        # 'views/header.xml',
+        'views/header.xml',
         'views/home.xml',
+        # 'views/shop_page.xml',
+        # 'views/team_details.xml',
+        # 'views/team_page.xml',
+        # 'views/faq_page.xml',
         # 'views/about.xml',
         'views/about_page.xml',
         'views/appointment_page.xml',
@@ -28,14 +32,19 @@
     ],
     'assets': {
         'web.assets_frontend': [
-            'dhs/static/src/lib/swiper.js',
-            # 'dhs/static/src/js/swiper_loader.js',
+            'dhs/static/src/js/swiper.js',
+            'dhs/static/src/js/components/swiper_blog_slider.js',
+            'dhs/static/src/js/jquery.js',
+            'dhs/static/src/js/swiper_blog.js',
             'dhs/static/src/css/style.css',
+            'dhs/static/src/css/slider.css',
+            'dhs/static/src/css/team_slider.css',
+            # 'dhs/static/src/css/blog_slider.css',
             'dhs/static/src/css/bootstrap.min.css',
             'dhs/static/src/css/fontawesome.min.css',
             'dhs/static/src/css/swiper-bundle.min.css',
             'dhs/static/src/js/main.js',
-            'dhs/static/src/js/jquery.js',
+
         ],
     },
 
