@@ -1,0 +1,237 @@
+<odoo>
+    <data>
+        <template id="our_doctors_template" name="Our Doctors Page" page="True">
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure">
+                    <div class="breadcumb-wrapper" data-bg-src="/dhs/static/src/img/bg/breadcumb-bg.jpg"/>
+                    <div class="container">
+                        <div class="breadcumb-content text-center py-5">
+                            <h1 class="breadcumb-title">Our Doctors</h1>
+                            <ul class="breadcumb-menu list-inline">
+                                <li class="list-inline-item">
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="list-inline-item">Our Doctors</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Doctors Section -->
+                    <section class="space">
+                        <div class="container">
+                            <div class="title-area text-center">
+                                <span class="sub-title">
+                                    <img src="/dhs/static/src/img/theme-img/title_icon.svg" alt="Icon"/>Expert doctors
+                                </span>
+                                <h2 class="sec-title">Meet our professional Doctors</h2>
+                            </div>
+
+                            <div class="row gy-40 justify-content-center">
+
+                                <!-- Doctor 1 -->
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="th-team team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_1.jpg" alt="Team"/>
+                                            <div class="th-social">
+                                                <a target="_blank" href="https://facebook.com/">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                                <a target="_blank" href="https://linkedin.com/">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                                <a target="_blank" href="https://twitter.com/">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h3 class="box-title">
+                                            <a href="#">Dr. Malcolm Function</a>
+                                        </h3>
+                                        <span class="team-desig">Neurologist</span>
+                                    </div>
+                                </div>
+
+                                <!-- Doctor 2 -->
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="th-team team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_2.jpg" alt="Team"/>
+                                            <div class="th-social">
+                                                <a target="_blank" href="https://facebook.com/">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                                <a target="_blank" href="https://linkedin.com/">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                                <a target="_blank" href="https://twitter.com/">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h3 class="box-title">
+                                            <a href="#">Dr. Douglas Lyphe</a>
+                                        </h3>
+                                        <span class="team-desig">Physiotherapist</span>
+                                    </div>
+                                </div>
+
+                                <!-- Doctor 3 -->
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="th-team team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_3.jpg" alt="Team"/>
+                                            <div class="th-social">
+                                                <a target="_blank" href="https://facebook.com/">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                                <a target="_blank" href="https://linkedin.com/">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                                <a target="_blank" href="https://twitter.com/">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h3 class="box-title">
+                                            <a href="#">Dr. Wisteria Ravenc</a>
+                                        </h3>
+                                        <span class="team-desig">Cardiologist</span>
+                                    </div>
+                                </div>
+
+                                <!-- Doctor 4 -->
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="th-team team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_4.jpg" alt="Team"/>
+                                            <div class="th-social">
+                                                <a target="_blank" href="https://facebook.com/">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                                <a target="_blank" href="https://linkedin.com/">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                                <a target="_blank" href="https://twitter.com/">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h3 class="box-title">
+                                            <a href="#">Dr. Benjamin Evalent</a>
+                                        </h3>
+                                        <span class="team-desig">Dentist</span>
+                                    </div>
+                                </div>
+
+                                <!-- Doctor 5 -->
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="th-team team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_5.jpg" alt="Team"/>
+                                            <div class="th-social">
+                                                <a target="_blank" href="https://facebook.com/">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                                <a target="_blank" href="https://linkedin.com/">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                                <a target="_blank" href="https://twitter.com/">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h3 class="box-title">
+                                            <a href="#">Dr. Rishita Rosei</a>
+                                        </h3>
+                                        <span class="team-desig">Neurologist</span>
+                                    </div>
+                                </div>
+
+                                <!-- Doctor 6 -->
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="th-team team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_6.jpg" alt="Team"/>
+                                            <div class="th-social">
+                                                <a target="_blank" href="https://facebook.com/">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                                <a target="_blank" href="https://linkedin.com/">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                                <a target="_blank" href="https://twitter.com/">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h3 class="box-title">
+                                            <a href="#">Dr. Emanuyel Mac</a>
+                                        </h3>
+                                        <span class="team-desig">Physiotherapist</span>
+                                    </div>
+                                </div>
+
+                                <!-- Doctor 7 -->
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="th-team team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_7.jpg" alt="Team"/>
+                                            <div class="th-social">
+                                                <a target="_blank" href="https://facebook.com/">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                                <a target="_blank" href="https://linkedin.com/">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                                <a target="_blank" href="https://twitter.com/">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h3 class="box-title">
+                                            <a href="#">Dr. Wilium Lily</a>
+                                        </h3>
+                                        <span class="team-desig">Cardiologist</span>
+                                    </div>
+                                </div>
+
+                                <!-- Doctor 8 -->
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="th-team team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_8.jpg" alt="Team"/>
+                                            <div class="th-social">
+                                                <a target="_blank" href="https://facebook.com/">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                                <a target="_blank" href="https://linkedin.com/">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                                <a target="_blank" href="https://twitter.com/">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h3 class="box-title">
+                                            <a href="#">Dr. Esabel Macran</a>
+                                        </h3>
+                                        <span class="team-desig">Dentist</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+            </t>
+        </template>
+        <record id="route_our_doctors_template" model="website.page">
+            <field name="name">Team</field>
+            <field name="url">/team</field>
+            <field name="view_id" ref="dhs.our_doctors_template"/>
+            <!--            <field name="website_published">True</field>-->
+        </record>
+    </data>
+</odoo>

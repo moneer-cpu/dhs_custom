@@ -1,0 +1,309 @@
+<odoo>
+    <data>
+        <template id="dhs_about_page_template" name="About Us Page">
+            <t t-call="website.layout">
+                <main>
+                    <div class="breadcumb-wrapper"
+                         t-attf-style="background-image: url('/dhs/static/src/img/bg/breadcumb-bg.jpg');">
+                        <div class="container">
+                            <div class="breadcumb-content">
+                                <h1 class="breadcumb-title">
+                                    <span t-editable="true">About Us</span>
+                                </h1>
+                                <ul class="breadcumb-menu">
+                                    <li>
+                                        <a t-att-href="'/'">Home</a>
+                                    </li>
+                                    <li>
+                                        <span t-editable="true">About Us</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Counter Area Section -->
+
+                    <div class="overflow-hidden space" id="about-sec">
+                        <div class="shape-mockup" style="top:0; right:0;">
+                            <img src="/dhs/static/src/img/shape/pattern_shape_1.png" alt="shape"/>
+                        </div>
+                        <div class="shape-mockup jump d-none d-xl-none" style="bottom:10%; left:2%;">
+                            <img src="/dhs/static/src/img/shape/medicine_1.png" alt="shape"/>
+                        </div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="title-area text-center">
+                                        <span class="sub-title">
+                                            <img src="/dhs/static/src/img/theme-img/title_icon.svg"
+                                                 alt="shape"/>
+                                            <span t-editable="true">About Our Company</span>
+                                        </span>
+                                        <h2 class="sec-title" t-editable="true">Taking Care of Your Health is Our Top
+                                            Priority
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-xl-6 mb-30 mb-xl-0">
+                                    <div class="img-box1">
+                                        <div class="img1">
+                                            <img src="/dhs/static/src/img/normal/about_1_3.png" alt="About"/>
+                                        </div>
+                                        <div class="about-info style2">
+                                            <h3 class="box-title" t-editable="true">Dr. Esita Jabed</h3>
+                                            <p class="box-text" t-editable="true">Mention the languages
+                                                <br/>
+                                                in which the staff.
+                                            </p>
+                                            <div class="box-review">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </div>
+                                            <a href="tel:+16356478965" class="box-link">
+                                                <i class="fa-solid fa-phone"></i>
+                                                +163 564 78965
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="ps-xxl-4 ms-xl-2 text-center text-xl-start">
+                                        <div class="title-area mb-32">
+                                            <p class="sec-text mt-n2" t-editable="true">
+                                                A brief statement outlining the purpose and mission of the clinic...
+                                            </p>
+                                        </div>
+                                        <div class="mb-25 mt-n1">
+                                            <div class="checklist style2 list-two-column">
+                                                <ul>
+                                                    <li>
+                                                        <i class="fas fa-heart-pulse"></i>
+                                                        <span t-editable="true">Medical Professionals</span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-heart-pulse"></i>
+                                                        <span t-editable="true">Facilities and Equipment</span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-heart-pulse"></i>
+                                                        <span t-editable="true">Emergency Care</span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-heart-pulse"></i>
+                                                        <span t-editable="true">Medical Consulting</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a href="/about" class="th-btn" t-editable="true">More About Us</a>
+                                        </div>
+                                        <div class="about-video-wrap">
+                                            <div class="th-video about-video">
+                                                <img src="/dhs/static/src/img/normal/about_1_4.jpg"
+                                                     alt="video"/>
+                                                <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                                                   class="play-btn popup-video">
+                                                    <i class="fas fa-play"></i>
+                                                </a>
+                                            </div>
+                                            <div class="box-content">
+                                                <p class="box-text" t-editable="true">
+                                                    We offer flexible appointment scheduling options to accommodate your
+                                                    busy lifestyle...
+                                                </p>
+                                                <div class="about-contact-wrap">
+                                                    <div class="about-contact">
+                                                        <p class="box-label" t-editable="true">Support Line 24/7</p>
+                                                        <h3 class="box-title">
+                                                            <i class="fal fa-envelope"></i>
+                                                            <a href="mailto:info@contact.com" t-editable="true">
+                                                                info@contact.com
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="about-contact">
+                                                        <p class="box-label" t-editable="true">Online Schedule</p>
+                                                        <h3 class="box-title">
+                                                            <i class="fal fa-calendar-alt"></i>
+                                                            <a href="/contact" t-editable="true">Book Here</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature Area Section -->
+
+                    <div class="z-index-common" style="position:relative;">
+                        <div class="container">
+                            <div class="counter-card-wrap bg-theme2">
+                                <div class="counter-card">
+                                    <h2 class="box-number text-white">
+                                        <span class="number">
+                                            <span class="counter-number" t-editable="true">69</span>k
+                                        </span>
+                                        <span class="plus">+</span>
+                                    </h2>
+                                    <p class="box-text text-white" t-editable="true">Satisfied Patients</p>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="counter-card">
+                                    <h2 class="box-number text-white">
+                                        <span class="number">
+                                            <span class="counter-number" t-editable="true">236</span>
+                                        </span>
+                                        <span class="plus">+</span>
+                                    </h2>
+                                    <p class="box-text text-white" t-editable="true">Professional Doctors</p>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="counter-card">
+                                    <h2 class="box-number text-white">
+                                        <span class="number">
+                                            <span class="counter-number" t-editable="true">19</span>k
+                                        </span>
+                                        <span class="plus">+</span>
+                                    </h2>
+                                    <p class="box-text text-white" t-editable="true">Operations Successful</p>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="counter-card">
+                                    <h2 class="box-number text-white">
+                                        <span class="number">
+                                            <span class="counter-number" t-editable="true">320</span>
+                                        </span>
+                                        <span class="plus">+</span>
+                                    </h2>
+                                    <p class="box-text text-white" t-editable="true">National Awards Win</p>
+                                </div>
+                                <div class="divider"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature Area Section -->
+
+                    <section class="why-sec3 space-top" id="why-sec"
+                             t-attf-style="background-image: url('/dhs/static/src/img/bg/why_bg_3.jpg');">
+                        <div class="container pb-5 mb-2">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="title-area text-center">
+                                        <span class="sub-title">
+                                            <img src="/dhs/static/src/img/theme-img/title_icon.svg"
+                                                 alt="shape"/>
+                                            <span t-editable="true">Why Choose Us</span>
+                                        </span>
+                                        <h2 class="sec-title" t-editable="true">We Have 25 Years Experience in Medical
+                                            Health Services
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gy-4">
+                                <t t-foreach="[1,2,3,4]" t-as="i">
+                                    <div class="col-xl-3 col-sm-6">
+                                        <div class="why-feature"
+                                             t-attf-style="background-image: url('/dhs/static/src/img/bg/why_feature_bg.png');">
+                                            <div class="box-icon">
+                                                <img t-att-src="'/dhs/static/src/img/icon/choose_feature_' + str(i) + '.svg'"
+                                                     alt="icon"/>
+                                            </div>
+                                            <h3 class="box-title" t-editable="true">Feature Title {{ i }}</h3>
+                                            <p class="box-text" t-editable="true">Our products are certified by
+                                                reputable organic.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="container z-index-common" style="position:relative;">
+                        <div class="th-video">
+                            <img src="/dhs/static/src/img/normal/video_1.jpg" alt="video"/>
+                            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Feature Area Section -->
+
+                    <section class="space" id="team-sec">
+                        <div class="container z-index-common">
+                            <div class="title-area text-center">
+                                <span class="sub-title">
+                                    <img src="/dhs/static/src/img/theme-img/title_icon.svg" alt="Icon"/>
+                                    <span t-editable="true">Expert doctors</span>
+                                </span>
+                                <h2 class="sec-title" t-editable="true">Meet our professional Doctors</h2>
+                            </div>
+
+                            <div class="swiper th-slider has-shadow" id="teamSlider1"
+                                 data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":2},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
+                                <div class="swiper-wrapper">
+                                    <t t-foreach="[
+              {'name': 'Dr. Malcolm Function', 'role': 'Neurologist', 'img': 'team_1_1.jpg'},
+              {'name': 'Dr. Douglas Lyphe', 'role': 'Physiotherapist', 'img': 'team_1_2.jpg'},
+              {'name': 'Dr. Wisteria Ravenc', 'role': 'Cardiologist', 'img': 'team_1_3.jpg'},
+              {'name': 'Dr. Benjamin Evalent', 'role': 'Dentist', 'img': 'team_1_4.jpg'},
+              {'name': 'Dr. Rishita Rosei', 'role': 'Neurologist', 'img': 'team_1_5.jpg'},
+              {'name': 'Dr. Emanuyel Mac', 'role': 'Physiotherapist', 'img': 'team_1_6.jpg'},
+              {'name': 'Dr. Wilium Lily', 'role': 'Cardiologist', 'img': 'team_1_7.jpg'},
+              {'name': 'Dr. Esabel Macran', 'role': 'Dentist', 'img': 'team_1_8.jpg'}
+            ]" t-as="doctor">
+                                        <div class="swiper-slide">
+                                            <div class="th-team team-card">
+                                                <div class="box-img">
+                                                    <img t-att-src="'/dhs/static/src/img/team/' + doctor['img']"
+                                                         alt="Team"/>
+                                                    <div class="th-social">
+                                                        <a target="_blank" href="https://facebook.com/">
+                                                            <i class="fab fa-facebook-f"></i>
+                                                        </a>
+                                                        <a target="_blank" href="https://linkedin.com/">
+                                                            <i class="fab fa-linkedin-in"></i>
+                                                        </a>
+                                                        <a target="_blank" href="https://twitter.com/">
+                                                            <i class="fab fa-twitter"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <h3 class="box-title">
+                                                    <a href="/team-details" t-editable="true">
+                                                        <t t-esc="doctor['name']"/>
+                                                    </a>
+                                                </h3>
+                                                <span class="team-desig" t-editable="true">
+                                                    <t t-esc="doctor['role']"/>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- باقي محتوى الصفحة هنا -->
+                </main>
+            </t>
+        </template>
+        <record id="dhs_about_page_record" model="website.page">
+            <field name="name">About Us</field>
+            <field name="url">/about-us</field>
+            <field name="view_id" ref="dhs.dhs_about_page_template"/>
+        </record>
+
+    </data>
+</odoo>
