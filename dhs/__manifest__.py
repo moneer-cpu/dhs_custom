@@ -28,7 +28,7 @@
         'views/services_page.xml',
         'views/service_details.xml',
         # 'views/pages.xml',
-        'views/footer_template.xml',
+        # 'views/footer_template.xml',
     ],
     'assets': {
         'web.assets_frontend': [
