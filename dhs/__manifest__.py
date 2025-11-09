@@ -13,7 +13,7 @@
     'website': 'https://',
     'depends': ['website'],
     'data': [
-        # 'views/header.xml',
+        'views/header.xml',
         'views/home.xml',
         # 'views/shop_page.xml',
         # 'views/team_details.xml',
