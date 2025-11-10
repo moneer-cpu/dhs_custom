@@ -14,7 +14,7 @@
     'depends': ['website'],
     'data': [
         'views/header.xml',
-        'views/home.xml',
+        # 'views/home.xml',
         # 'views/shop_page.xml',
         # 'views/team_details.xml',
         # 'views/team_page.xml',
@@ -27,7 +27,7 @@
         'views/blog-details.xml',
         'views/services_page.xml',
         'views/service_details.xml',
-        # 'views/pages.xml',
+        'views/pages.xml',
         'views/footer_template.xml',
     ],
     'assets': {

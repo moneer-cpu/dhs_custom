@@ -95,34 +95,8 @@
                                         <div class="col-auto d-none d-lg-inline-block">
                                             <nav class="main-menu d-none d-lg-inline-block">
                                                 <ul>
-                                                    <li class="menu-item-has-children">
+                                                    <li>
                                                         <a href="/home">Home</a>
-<!--                                                        <ul class="sub-menu">-->
-<!--&lt;!&ndash;                                                            <li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                                <a href="#">Medical Clinic</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            </li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            <li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                                <a href="#">Dental Care</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            </li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            <li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                                <a href="#">Medical Shop</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            </li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            <li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                                <a href="#">Ophthalmology</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            </li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            <li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                                <a href="#">Pediatrics</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            </li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            <li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                                <a href="#">Gynecology</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            </li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            <li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                                <a href="#">Aesthetic Dentistry</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            </li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            <li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                                <a href="#">Medical Cosmetics</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            </li>&ndash;&gt;-->
-<!--                                                        </ul>-->
                                                     </li>
                                                     <li>
                                                         <a href="#">About Us</a>

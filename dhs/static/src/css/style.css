@@ -1234,7 +1234,7 @@ textarea.is-invalid {
   border-right: 3px solid var(--theme-color);
   height: 100%;
   position: relative;
-  left: -110%;
+  left: -50%;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all ease 1s;
@@ -5198,8 +5198,8 @@ ol.wp-block-rss {
 }
 
 .header-logo {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .header-links ul {
@@ -5359,7 +5359,7 @@ ol.wp-block-rss {
   position: relative;
   z-index: 2;
   height: 100px;
-  padding: 20px 100px 20px 0;
+  padding: 20px 20px 20px 0;
 }
 
 .header-layout1 .header-logo .logo-bg {
