@@ -5365,9 +5365,9 @@ ol.wp-block-rss {
 .header-layout1 .header-logo .logo-bg {
   position: absolute;
   top: 0;
-  right: -26px;
+  right: -5px;
   height: 100%;
-  width: 2000px;
+  width: 200px;
   background-size: auto;
   background-repeat: repeat;
   background-position: center right;
@@ -5666,7 +5666,7 @@ ol.wp-block-rss {
 .header-layout3 .sticky-wrapper.sticky .header-logo {
   height: 100%;
   margin-top: 0;
-  padding: 19px 39px;
+  padding: 10px 10px;
 }
 
 .header-layout3 .th-menu-toggle {
@@ -16253,7 +16253,7 @@ span.select2-selection.select2-selection--single:focus {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 170px) {
   .header-layout5 .header-logo {
     height: auto;
   }

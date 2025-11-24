@@ -14,7 +14,7 @@
     'depends': ['website'],
     'data': [
         'views/header.xml',
-        # 'views/home.xml',
+        'views/home.xml',
         # 'views/shop_page.xml',
         # 'views/team_details.xml',
         # 'views/team_page.xml',
@@ -28,7 +28,7 @@
         'views/services_page.xml',
         'views/service_details.xml',
         'views/pages.xml',
-        'views/footer_template.xml',
+        # 'views/footer_template.xml',
     ],
     'assets': {
         'web.assets_frontend': [
@@ -39,7 +39,7 @@
             'dhs/static/src/css/style.css',
             'dhs/static/src/css/slider.css',
             'dhs/static/src/css/team_slider.css',
-            # 'dhs/static/src/css/blog_slider.css',
+            # 'dhs/static/src/scss/header.scss',
             'dhs/static/src/css/bootstrap.min.css',
             'dhs/static/src/css/fontawesome.min.css',
             'dhs/static/src/css/swiper-bundle.min.css',
