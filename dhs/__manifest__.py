@@ -27,7 +27,6 @@
         'views/blog-details.xml',
         'views/services_page.xml',
         'views/service_details.xml',
-        'views/pages.xml',
         # 'views/footer_template.xml',
     ],
     'assets': {
