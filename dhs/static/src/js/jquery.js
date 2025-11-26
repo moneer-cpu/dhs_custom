@@ -1,34 +1,22 @@
 /** @odoo-module **/
 
-// Import the core Odoo module dependencies
-import { Component, xml, onMounted } from "@odoo/owl";
-import { registry } from "@web/core/registry";
+import { mount } from "@odoo/owl";
+import { SwiperBlogSlider } from 'dhs/static/src/js/components/swiper_blog_slider';
 
-// jQuery is already available via the Odoo framework dependencies
-const $ = require('jquery');
-
-class jQueryExampleComponent extends Component {
-    setup() {
-        onMounted(() => {
-            // Now you can use jQuery methods
-            this.highlightElement();
-            console.log("jQuery version running in Odoo:", $.fn.jquery);
-        });
+mount(SwiperBlogSlider, {
+    target: document.querySelector('#your-target'),
+    props: {
+        slides: [
+            {
+                img: "/dhs/static/src/img/blog/blog_1_1.jpg",
+                date: "15 March, 2024",
+                title: "How Business Is Taking Over & What to Do About It"
+            },
+            {
+                img: "/dhs/static/src/img/blog/blog_1_2.jpg",
+                date: "16 March, 2024",
+                title: "Health vs. Wealth Navigate Business in Medicine"
+            }
+        ]
     }
-
-    highlightElement() {
-        // Use jQuery syntax within your Odoo component
-        $(this.el).css('border', '2px solid red');
-        $(this.el).find('.my-inner-div').text('I was modified by jQuery!');
-    }
-}
-
-jQueryExampleComponent.template = xml`
-    <div class="odoo-jquery-component">
-        <h1>Odoo Component</h1>
-        <div class="my-inner-div">Original Text</div>
-    </div>
-`;
-
-// Register the component if needed
-// registry.category("actions").add("jQueryExampleAction", jQueryExampleComponent);
+});

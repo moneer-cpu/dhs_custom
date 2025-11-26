@@ -96,7 +96,7 @@
         </template>
         <record id="dhs_appointment_page_record" model="website.page">
             <field name="name">appointment</field>
-            <field name="url">/appointment</field>
+            <field name="url">/dhs-appointment</field>
             <field name="view_id" ref="dhs.dhs_appointment_page_template"/>
         </record>
 

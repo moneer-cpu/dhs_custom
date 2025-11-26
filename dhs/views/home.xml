@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!-- تعريف الصفحة باسم home -->
-    <template id="home_page_template" name="Home Page">
+    <template id="home_page_template" name="Home">
         <t t-call="website.layout">
+            <t t-set="header" t-value="False"/>
             <div id="wrap" class="oe_structure">
 
                 <!-- Hero Section -->
@@ -405,6 +406,7 @@
                 <section class="bg-top-center space-top" id="team-sec"
                          data-bg-src="/dhs/static/src/img/bg/team_bg_1.jpg">
                     <div class="container z-index-common">
+                        <!-- العنوان -->
                         <div class="title-area text-center">
                             <span class="sub-title">
                                 <img src="/dhs/static/src/img/theme-img/title_icon.svg" alt="Icon"/>
@@ -412,102 +414,75 @@
                             </span>
                             <h2 class="sec-title">Meet our professional Doctors</h2>
                         </div>
-                        <div class="swiper th-slider has-shadow" id="teamSlider1"
-                             data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"}}}'>
-                            <div class="swiper-wrapper">
-                                <!-- Single Item -->
-                                <div class="swiper-slide">
-                                    <div class="th-team team-card">
+
+                        <!-- السلايدر -->
+                        <div class="team-slider">
+                            <div class="slides">
+                                <!-- شريحة 1 -->
+                                <div class="slide">
+                                    <div class="team-card">
                                         <div class="box-img">
                                             <img src="/dhs/static/src/img/team/team_1_1.jpg" alt="Team"/>
-                                            <div class="th-social">
-                                                <a target="_blank" href="https://facebook.com/">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                                <a target="_blank" href="https://linkedin.com/">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                                <a target="_blank" href="https://twitter.com/">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </div>
                                         </div>
-                                        <h3 class="box-title">
-                                            <a href="#">Dr. Malcolm Function</a>
-                                        </h3>
+                                        <h3 class="box-title">Dr. Malcolm Function</h3>
                                         <span class="team-desig">Neurologist</span>
                                     </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="th-team team-card">
+                                    <div class="team-card">
                                         <div class="box-img">
                                             <img src="/dhs/static/src/img/team/team_1_2.jpg" alt="Team"/>
-                                            <div class="th-social">
-                                                <a target="_blank" href="https://facebook.com/">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                                <a target="_blank" href="https://linkedin.com/">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                                <a target="_blank" href="https://twitter.com/">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </div>
                                         </div>
-                                        <h3 class="box-title">
-                                            <a href="#">Dr. Douglas Lyphe</a>
-                                        </h3>
+                                        <h3 class="box-title">Dr. Douglas Lyphe</h3>
                                         <span class="team-desig">Physiotherapist</span>
+                                    </div>
+                                    <div class="team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_3.jpg" alt="Team"/>
+                                        </div>
+                                        <h3 class="box-title">Dr. Wisteria Ravenc</h3>
+                                        <span class="team-desig">Cardiologist</span>
+                                    </div>
+                                    <div class="team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_4.jpg" alt="Team"/>
+                                        </div>
+                                        <h3 class="box-title">Dr. Benjamin Evalent</h3>
+                                        <span class="team-desig">Dentist</span>
                                     </div>
                                 </div>
 
-                                <div class="swiper-slide">
-                                    <div class="th-team team-card">
+                                <!-- شريحة 2 -->
+                                <div class="slide">
+                                    <div class="team-card">
                                         <div class="box-img">
-                                            <img src="/dhs/static/src/img/team/team_1_3.jpg" alt="Team"/>
-                                            <div class="th-social">
-                                                <a target="_blank" href="https://facebook.com/">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                                <a target="_blank" href="https://linkedin.com/">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                                <a target="_blank" href="https://twitter.com/">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </div>
+                                            <img src="/dhs/static/src/img/team/team_1_5.jpg" alt="Team"/>
                                         </div>
-                                        <h3 class="box-title">
-                                            <a href="#">Dr. Wisteria Ravenc</a>
-                                        </h3>
+                                        <h3 class="box-title">Dr. Amelia Frost</h3>
+                                        <span class="team-desig">Surgeon</span>
+                                    </div>
+                                    <div class="team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_6.jpg" alt="Team"/>
+                                        </div>
+                                        <h3 class="box-title">Dr. Nathan Drake</h3>
+                                        <span class="team-desig">Pediatrician</span>
+                                    </div>
+                                    <div class="team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_7.jpg" alt="Team"/>
+                                        </div>
+                                        <h3 class="box-title">Dr. Sophia Lynn</h3>
+                                        <span class="team-desig">Dermatologist</span>
+                                    </div>
+                                    <div class="team-card">
+                                        <div class="box-img">
+                                            <img src="/dhs/static/src/img/team/team_1_8.jpg" alt="Team"/>
+                                        </div>
+                                        <h3 class="box-title">Dr. Ethan Hunt</h3>
                                         <span class="team-desig">Cardiologist</span>
                                     </div>
                                 </div>
 
-                                <div class="swiper-slide">
-                                    <div class="th-team team-card">
-                                        <div class="box-img">
-                                            <img src="/dhs/static/src/img/team/team_1_4.jpg" alt="Team"/>
-                                            <div class="th-social">
-                                                <a target="_blank" href="https://facebook.com/">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                                <a target="_blank" href="https://linkedin.com/">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                                <a target="_blank" href="https://twitter.com/">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <h3 class="box-title">
-                                            <a href="#">Dr. Benjamin Evalent</a>
-                                        </h3>
-                                        <span class="team-desig">Dentist</span>
-                                    </div>
-                                </div>
-                                <!-- أضف باقي العناصر كما هي -->
+                                <!-- أضف المزيد من الشرائح بنفس الطريقة -->
                             </div>
                         </div>
                     </div>
@@ -773,13 +748,14 @@
                                 <img src="/dhs/static/src/img/theme-img/title_icon.svg" alt="shape"/>
                                 Testimonials
                             </span>
-                            <h2 class="sec-title">What Our Present Says?</h2>
+                            <h2 class="sec-title">What Our Patients Say?</h2>
                         </div>
-                        <div class="swiper th-slider" id="testiSlide1"
-                             data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"2"}}}'>
-                            <div class="swiper-wrapper">
 
-                                <div class="swiper-slide">
+                        <!-- ✅ CSS Slider بدون JavaScript -->
+                        <div class="testimonials-slider">
+                            <div class="slides">
+
+                                <div class="slide">
                                     <div class="testi-card bg-smoke">
                                         <div class="box-review">
                                             <i class="fa-sharp fa-solid fa-star"></i>
@@ -791,13 +767,12 @@
                                         <div class="box-quote">
                                             <img src="/dhs/static/src/img/icon/quote_1.svg" alt="Icon"/>
                                         </div>
-                                        <p class="box-text">“Objectively deploy open-source web-readiness impactful
-                                            bandwidth. Compellingly coordinate business deliverables rather equity
-                                            invested technologies. Phosfluorescently reinvent maintainable.”
+                                        <p class="box-text">
+                                            “Great service and very professional staff. Highly recommended!”
                                         </p>
                                         <div class="box-profile">
                                             <div class="box-img">
-                                                <img src="/dhs/static/src/img/testimonial/testi_1_1.jpg" alt="Avater"/>
+                                                <img src="/dhs/static/src/img/testimonial/testi_1_1.jpg" alt="Avatar"/>
                                             </div>
                                             <div class="box-content">
                                                 <h3 class="box-title">Pelican Steve</h3>
@@ -805,9 +780,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="swiper-slide">
                                     <div class="testi-card bg-smoke">
                                         <div class="box-review">
                                             <i class="fa-sharp fa-solid fa-star"></i>
@@ -819,13 +792,12 @@
                                         <div class="box-quote">
                                             <img src="/dhs/static/src/img/icon/quote_1.svg" alt="Icon"/>
                                         </div>
-                                        <p class="box-text">“Objectively deploy open-source web-readiness impactful
-                                            bandwidth. Compellingly coordinate business deliverables rather equity
-                                            invested technologies. Phosfluorescently reinvent maintainable.”
+                                        <p class="box-text">
+                                            “They really care about your health and well-being.”
                                         </p>
                                         <div class="box-profile">
                                             <div class="box-img">
-                                                <img src="/dhs/static/src/img/testimonial/testi_1_2.jpg" alt="Avater"/>
+                                                <img src="/dhs/static/src/img/testimonial/testi_1_2.jpg" alt="Avatar"/>
                                             </div>
                                             <div class="box-content">
                                                 <h3 class="box-title">Alexa Milton</h3>
@@ -835,7 +807,7 @@
                                     </div>
                                 </div>
 
-                                <div class="swiper-slide">
+                                <div class="slide">
                                     <div class="testi-card bg-smoke">
                                         <div class="box-review">
                                             <i class="fa-sharp fa-solid fa-star"></i>
@@ -847,23 +819,20 @@
                                         <div class="box-quote">
                                             <img src="/dhs/static/src/img/icon/quote_1.svg" alt="Icon"/>
                                         </div>
-                                        <p class="box-text">“Objectively deploy open-source web-readiness impactful
-                                            bandwidth. Compellingly coordinate business deliverables rather equity
-                                            invested technologies. Phosfluorescently reinvent maintainable.”
+                                        <p class="box-text">
+                                            “Friendly doctors and top-notch facilities.”
                                         </p>
                                         <div class="box-profile">
                                             <div class="box-img">
-                                                <img src="/dhs/static/src/img/testimonial/testi_1_1.jpg" alt="Avater"/>
+                                                <img src="/dhs/static/src/img/testimonial/testi_1_3.jpg" alt="Avatar"/>
                                             </div>
                                             <div class="box-content">
-                                                <h3 class="box-title">Pelican Steve</h3>
-                                                <span class="box-desig">Neurologist</span>
+                                                <h3 class="box-title">John Carter</h3>
+                                                <span class="box-desig">Dentist</span>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="swiper-slide">
                                     <div class="testi-card bg-smoke">
                                         <div class="box-review">
                                             <i class="fa-sharp fa-solid fa-star"></i>
@@ -875,204 +844,25 @@
                                         <div class="box-quote">
                                             <img src="/dhs/static/src/img/icon/quote_1.svg" alt="Icon"/>
                                         </div>
-                                        <p class="box-text">“Objectively deploy open-source web-readiness impactful
-                                            bandwidth. Compellingly coordinate business deliverables rather equity
-                                            invested technologies. Phosfluorescently reinvent maintainable.”
+                                        <p class="box-text">
+                                            “Quick appointment and excellent treatment experience.”
                                         </p>
                                         <div class="box-profile">
                                             <div class="box-img">
-                                                <img src="/dhs/static/src/img/testimonial/testi_1_2.jpg" alt="Avater"/>
+                                                <img src="/dhs/static/src/img/testimonial/testi_1_4.jpg" alt="Avatar"/>
                                             </div>
                                             <div class="box-content">
-                                                <h3 class="box-title">Alexa Milton</h3>
-                                                <span class="box-desig">Physiotherapist</span>
+                                                <h3 class="box-title">Sarah Lewis</h3>
+                                                <span class="box-desig">Cardiologist</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
-                            <div class="slider-pagination"></div>
                         </div>
                     </div>
                 </section>
-                <!-- نهاية -->
-
-                <!-- بداية -->
-                <section class="space" id="blog-sec" data-bg-src="/dhs/static/src/img/bg/blog_bg_1.jpg">
-                    <div class="container">
-                        <div class="row justify-content-lg-between justify-content-center align-items-center">
-                            <div class="col-lg">
-                                <div class="title-area text-center text-lg-start">
-                                    <span class="sub-title">
-                                        <img src="/dhs/static/src/img/theme-img/title_icon.svg" alt="shape"/>
-                                        Our Blog
-                                    </span>
-                                    <h2 class="sec-title">Our Latest News &amp;
-                                        Blogs
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="col-lg-auto d-none d-lg-block">
-                                <div class="sec-btn">
-                                    <a href="blog.html" class="th-btn style4">View All Post</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-area">
-                            <div class="swiper th-slider has-shadow" id="blogSlider1"
-                                 data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
-                                <div class="swiper-wrapper">
-
-                                    <div class="swiper-slide">
-                                        <div class="blog-card">
-                                            <div class="blog-img">
-                                                <img src="/dhs/static/src/img/blog/blog_1_1.jpg" alt="blog image"/>
-                                            </div>
-                                            <div class="blog-content">
-                                                <div class="blog-meta">
-                                                    <a href="blog.html"><i class="fal fa-user"></i>By Mediax
-                                                    </a>
-                                                    <a href="blog.html"><i class="fal fa-calendar"></i>15 March, 2024
-                                                    </a>
-                                                </div>
-                                                <h3 class="box-title">
-                                                    <a href="blog-details.html">How Business Is Taking Over &amp;
-                                                        What to Do
-                                                        About It
-                                                    </a>
-                                                </h3>
-                                                <a href="blog-details.html" class="th-btn btn-sm">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="blog-card">
-                                            <div class="blog-img">
-                                                <img src="/dhs/static/src/img/blog/blog_1_2.jpg" alt="blog image"/>
-                                            </div>
-                                            <div class="blog-content">
-                                                <div class="blog-meta">
-                                                    <a href="blog.html"><i class="fal fa-user"></i>By Mediax
-                                                    </a>
-                                                    <a href="blog.html"><i class="fal fa-calendar"></i>16 March, 2024
-                                                    </a>
-                                                </div>
-                                                <h3 class="box-title">
-                                                    <a href="blog-details.html">Health vs. Wealth Navigate Business in
-                                                        Medicine
-                                                    </a>
-                                                </h3>
-                                                <a href="blog-details.html" class="th-btn btn-sm">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="blog-card">
-                                            <div class="blog-img">
-                                                <img src="/dhs/static/src/img/blog/blog_1_3.jpg" alt="blog image"/>
-                                            </div>
-                                            <div class="blog-content">
-                                                <div class="blog-meta">
-                                                    <a href="blog.html"><i class="fal fa-user"></i>By Mediax
-                                                    </a>
-                                                    <a href="blog.html"><i class="fal fa-calendar"></i>17 March, 2024
-                                                    </a>
-                                                </div>
-                                                <h3 class="box-title">
-                                                    <a href="blog-details.html">Preserving Care Strategy Amidst Food
-                                                        Changes
-                                                    </a>
-                                                </h3>
-                                                <a href="blog-details.html" class="th-btn btn-sm">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="blog-card">
-                                            <div class="blog-img">
-                                                <img src="/dhs/static/src/img/blog/blog_1_4.jpg" alt="blog image"/>
-                                            </div>
-                                            <div class="blog-content">
-                                                <div class="blog-meta">
-                                                    <a href="blog.html"><i class="fal fa-user"></i>By Mediax
-                                                    </a>
-                                                    <a href="blog.html"><i class="fal fa-calendar"></i>19 March, 2024
-                                                    </a>
-                                                </div>
-                                                <h3 class="box-title">
-                                                    <a href="blog-details.html">Healthcare Tips Navigating Business
-                                                        &amp;
-
-                                                        Patient Care
-                                                    </a>
-                                                </h3>
-                                                <a href="blog-details.html" class="th-btn btn-sm">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="blog-card">
-                                            <div class="blog-img">
-                                                <img src="/dhs/static/src/img/blog/blog_1_1.jpg" alt="blog image"/>
-                                            </div>
-                                            <div class="blog-content">
-                                                <div class="blog-meta">
-                                                    <a href="blog.html"><i class="fal fa-user"></i>By Mediax
-                                                    </a>
-                                                    <a href="blog.html"><i class="fal fa-calendar"></i>15 March, 2024
-                                                    </a>
-                                                </div>
-                                                <h3 class="box-title">
-                                                    <a href="blog-details.html">Strategies Against Corporate Intrusion
-                                                        in Healthcare
-                                                    </a>
-                                                </h3>
-                                                <a href="blog-details.html" class="th-btn btn-sm">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="blog-card">
-                                            <div class="blog-img">
-                                                <img src="/dhs/static/src/img/blog/blog_1_2.jpg" alt="blog image"/>
-                                            </div>
-                                            <div class="blog-content">
-                                                <div class="blog-meta">
-                                                    <a href="blog.html"><i class="fal fa-user"></i>By Mediax
-                                                    </a>
-                                                    <a href="blog.html"><i class="fal fa-calendar"></i>16 March, 2024
-                                                    </a>
-                                                </div>
-                                                <h3 class="box-title">
-                                                    <a href="blog-details.html">Transform Your Nutrition with Organic
-                                                        Meal
-                                                    </a>
-                                                </h3>
-                                                <a href="blog-details.html" class="th-btn btn-sm">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <button data-slider-prev="#blogSlider1" class="slider-arrow slider-prev">
-                                <i class="far fa-arrow-left"></i>
-                            </button>
-                            <button data-slider-next="#blogSlider1" class="slider-arrow slider-next">
-                                <i class="far fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-                <!-- نهاية -->
-
-
             </div>
         </t>
     </template>
