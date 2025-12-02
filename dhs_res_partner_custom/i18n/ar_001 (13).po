@@ -1,0 +1,135 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dhs_res_partner_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-29 01:54+0000\n"
+"PO-Revision-Date: 2025-11-29 01:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>CHI CODE</strong>"
+msgstr "‏<strong>رقم اعتماد مجلس الضمان الصحي</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>CLIENT REFERENCE</strong>"
+msgstr "‏<strong>رقم مرجع العميل</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>CONTACT NO.</strong>"
+msgstr "‏<strong>رقم التواصل</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>CONTACT PERSON</strong>"
+msgstr "<strong>الشخص المسؤول</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>CONTRACT REFERENCE</strong>"
+msgstr "<strong>اتفاقية مرجع</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>DHS CODE</strong>"
+msgstr "<strong>كود الشركة</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>DUE DATE</strong>"
+msgstr "‏<strong>تاريخ الاستحقاق</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>EMAIL ADDRESS</strong>"
+msgstr "<strong>عنوان البريد الالكتروني</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>INVOICE NO.</strong>"
+msgstr "‏<strong>رقم الفاتورة</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>LOCATION</strong>"
+msgstr "‏<strong>العنوان</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>NPHIES ID</strong>"
+msgstr "‏<strong>رقم نفيس</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>TO</strong>"
+msgstr "‏<strong>الى</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>VAT REGISTRATION NO.</strong>"
+msgstr "‏<strong>ضريبة القيمة المضافة الرقم الضريبي</strong>"
+
+#. module: dhs_res_partner_custom
+#: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_partner__cchi
+#: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_users__cchi
+msgid "CCHI"
+msgstr " "
+
+#. module: dhs_res_partner_custom
+#: model:ir.model.fields.selection,name:dhs_res_partner_custom.selection__res_partner__region__central
+msgid "Central region"
+msgstr "المنطقة الوسطى"
+
+#. module: dhs_res_partner_custom
+#: model:ir.model,name:dhs_res_partner_custom.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: dhs_res_partner_custom
+#: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_partner__contract_no
+#: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_users__contract_no
+msgid "Contract Number"
+msgstr "رقم العقد"
+
+#. module: dhs_res_partner_custom
+#: model:ir.model.fields.selection,name:dhs_res_partner_custom.selection__res_partner__region__eastern
+msgid "Eastern region"
+msgstr "المنطقة الشرقية"
+
+#. module: dhs_res_partner_custom
+#: model:ir.model.fields.selection,name:dhs_res_partner_custom.selection__res_partner__region__northern
+msgid "Northern region"
+msgstr "المنطقة الشمالية"
+
+#. module: dhs_res_partner_custom
+#: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_partner__nphies
+#: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_users__nphies
+msgid "Nphies Number"
+msgstr "رقم نفيس"
+
+#. module: dhs_res_partner_custom
+#: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_partner__region
+#: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_users__region
+msgid "Region"
+msgstr "المنطقة"
+
+#. module: dhs_res_partner_custom
+#: model:ir.model.fields.selection,name:dhs_res_partner_custom.selection__res_partner__region__southern
+msgid "Southern Region"
+msgstr "المنطقة الجنوبية"
+
+#. module: dhs_res_partner_custom
+#: model:ir.model.fields.selection,name:dhs_res_partner_custom.selection__res_partner__region__western
+msgid "Western region"
+msgstr "المنطقة الغربية"

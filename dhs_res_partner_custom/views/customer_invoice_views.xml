@@ -1,0 +1,14 @@
+<odoo>
+    <record id="customer_invoice_form_inherit_nphies" model="ir.ui.view">
+        <field name="name">view.order.form.inherit.nphies</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="context">
+                    {'res_partner_search_mode': 'customer', 'show_address': 1, 'show_vat': True, 'show_cchi': True}
+                </attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
