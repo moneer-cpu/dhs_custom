@@ -1,0 +1,20 @@
+<odoo>
+    <!-- Inherit the customer search view -->
+    <record id="view_partner_search_inherit" model="ir.ui.view">
+        <field name="name">res.partner.search.inherit.cchi.nphies.provider</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <!-- Add CCHI Code -->
+                <field name="cchi" string="CCHI Code"/>
+
+                <!-- Add NPHIES Number -->
+                <field name="nphies" string="NPHIES No"/>
+
+                <!-- Add Provider Code -->
+                <field name="provider_code" string="Provider Code"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

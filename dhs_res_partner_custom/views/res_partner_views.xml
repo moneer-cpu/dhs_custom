@@ -10,6 +10,7 @@
                 <field name="nphies"/>
                 <field name="contract_no"/>
                 <field name="cchi"/>
+                <field name="provider_code"/>
                 <field name="region"/>
             </xpath>
             <xpath expr="//field[@name='region']" position="attributes">

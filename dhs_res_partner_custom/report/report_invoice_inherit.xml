@@ -1,133 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="report_account_invoice_document_inherit" inherit_id="account.report_invoice_document">
+    <template id="report_account_invoice_document_inherit" inherit_id="l10n_gcc_invoice.arabic_english_invoice">
 
-        <xpath expr="//div[@name='shipping_address_block']/ancestor::div[@class='row'][1]" position="replace"/>
-
-        <xpath expr="//t[@t-set='layout_document_title']" position="replace">
-            <t/>
+        <!-- Remove unwanted inherited blocks -->
+        <xpath expr="//t[@t-set='o']" position="replace"/>
+        <xpath expr="//t[@t-set='forced_vat']" position="replace"/>
+        <xpath expr="//t[@t-set='address']" position="replace"/>
+        <xpath expr="//div[@id='informations']" position="replace"><div/></xpath>
+        <xpath expr="(//div[hasclass('col-4')])[1]" position="replace"/>
+        <xpath expr="(//div[hasclass('col-4')])[2]" position="attributes">
+            <attribute name="style">text-align:left</attribute>
         </xpath>
+        <xpath expr="//div[hasclass('col-4') and hasclass('text-center')]" position="replace"/>
 
-        <xpath expr="//div[@id='informations']" position="replace">
-            <div/>
-        </xpath>
-
-
+        <!-- Custom header before table -->
         <xpath expr="//table[contains(@class, 'table')]" position="before">
-            <t t-set="layout_document_title">
-                <span t-if="not proforma"></span>
-                <span t-else="">PROFORMA</span>
-                <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Invoice</span>
-                <span t-elif="o.move_type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
-                <span t-elif="o.move_type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
-                <span t-elif="o.move_type == 'out_refund' and o.state == 'posted'">Credit Note</span>
-                <span t-elif="o.move_type == 'out_refund' and o.state == 'draft'">Draft Credit Note</span>
-                <span t-elif="o.move_type == 'out_refund' and o.state == 'cancel'">Cancelled Credit Note</span>
-                <span t-elif="o.move_type == 'in_refund'">Vendor Credit Note</span>
-                <span t-elif="o.move_type == 'in_invoice'">Vendor Bill</span>
-            </t>
+
+
+            <!-- TO -->
             <div class="row mb-3">
                 <div>
-                    <span style="width: 180px; display: inline-block;">TO</span>
-                    <span style="margin-left:60px;" t-field="o.partner_id"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">إلى</span>
+                    <strong>TO</strong><br/>
+                    <strong>إلى</strong>
+                    <div t-field="o.partner_id"/>
                 </div>
             </div>
+
+            <!-- LOCATION + INVOICE NO -->
             <div class="row mb-3">
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">LOCATION</span>
-                    <span style="margin-left:60px;" t-field="o.partner_id.street"/>
-                    <span t-field="o.partner_id.street2"/>
-                    <span t-field="o.partner_id.city"/>
-                    <span t-field="o.partner_id.country_id"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">العنوان</span>
+                    <strong>LOCATION</strong><br/>
+                    <strong>العنوان</strong>
+                    <div>
+                        <t t-esc="o.partner_id.street"/>
+                        <t t-if="o.partner_id.street2">, <t t-esc="o.partner_id.street2"/></t>
+                        <t t-if="o.partner_id.city">, <t t-esc="o.partner_id.city"/></t>
+                        <t t-if="o.partner_id.country_id">, <t t-esc="o.partner_id.country_id.name"/></t>
+                    </div>
                 </div>
-
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">INVOICE NO.</span>
-                    <span style="margin-left:60px;" t-field="o.name"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">رقم الفاتورة</span>
+                    <strong>INVOICE NO.</strong><br/>
+                    <strong>رقم الفاتورة</strong>
+                    <div t-field="o.name"/>
                 </div>
             </div>
+
+            <!-- CONTACT PERSON + CLIENT REFERENCE -->
             <div class="row mb-3">
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">CONTACT PERSON</span>
-                    <span style="margin-left:60px;" t-field="o.invoice_user_id"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">الشخص المسؤول</span>
+                    <strong>CONTACT PERSON</strong><br/>
+                    <strong>الشخص المسؤول</strong>
+                    <div t-field="o.invoice_user_id"/>
                 </div>
-
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">CLIENT REFERENCE</span>
-                    <span style="margin-left:60px;" t-field="o.partner_id.ref"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">رقم مرجع العميل</span>
+                    <strong>CLIENT REFERENCE</strong><br/>
+                    <strong>رقم مرجع العميل</strong>
+                    <div t-field="o.partner_id.ref"/>
                 </div>
             </div>
+
+            <!-- CONTACT NO + DUE DATE -->
             <div class="row mb-3">
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">CONTACT NO.</span>
-                    <span style="margin-left:60px;" t-field="o.partner_id.phone"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">رقم التواصل</span>
+                    <strong>CONTACT NO.</strong><br/>
+                    <strong>رقم التواصل</strong>
+                    <div t-field="o.partner_id.phone"/>
                 </div>
-
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">DUE DATE</span>
-                    <span style="margin-left:60px;" t-field="o.invoice_date_due"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">تاريخ الاستحقاق</span>
+                    <strong>DUE DATE</strong><br/>
+                    <strong>تاريخ الاستحقاق</strong>
+                    <div t-field="o.invoice_date_due" t-options='{"widget": "date"}'/>
                 </div>
             </div>
+
+            <!-- EMAIL + CONTRACT REFERENCE -->
             <div class="row mb-3">
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">EMAIL ADDRESS</span>
-                    <span style="margin-left:60px;" t-field="o.partner_id.email"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">عنوان البريد الالكتروني</span>
+                    <strong>EMAIL ADDRESS</strong><br/>
+                    <strong>عنوان البريد الالكتروني</strong>
+                    <div t-field="o.partner_id.email"/>
                 </div>
-
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">CONTRACT REFERENCE</span>
-                    <span style="margin-left:60px;" t-field="o.partner_id.contract_no"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">اتفاقية مرجع</span>
+                    <strong>CONTRACT REFERENCE</strong><br/>
+                    <strong>اتفاقية مرجع</strong>
+                    <div t-field="o.partner_id.contract_no"/>
                 </div>
             </div>
+
+            <!-- VAT + DHS CODE -->
             <div class="row mb-3">
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">VAT REGISTRATION NO.</span>
-                    <span style="margin-left:60px;" t-field="o.partner_id.vat"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">ضريبة القيمة المضافة الرقم الضريبي</span>
+                    <strong>VAT REGISTRATION NO.</strong><br/>
+                    <strong>الرقم الضريبي</strong>
+                    <div t-field="o.partner_id.vat"/>
                 </div>
-
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">DHS CODE</span>
-                    <span style="margin-left:60px;" t-field="o.partner_id.email"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">كود الشركة</span>
+                    <strong>DHS CODE</strong><br/>
+                    <strong>كود الشركة</strong>
+<!--                    <div t-field="o.partner_id.dhs_code"/>-->
                 </div>
             </div>
+
+            <!-- NPHIES + CHI CODE -->
             <div class="row mb-3">
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">NPHIES ID</span>
-                    <span style="margin-left:60px;" t-field="o.partner_id.nphies"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">رقم نفيس</span>
+                    <strong>NPHIES ID</strong><br/>
+                    <strong>رقم نفيس</strong>
+                    <div t-field="o.partner_id.nphies"/>
                 </div>
-
                 <div class="col">
-                    <span style="width: 180px; display: inline-block;">CHI CODE</span>
-                    <span style="margin-left:60px;" t-field="o.partner_id.cchi"/>
-                    <br/>
-                    <span style="width: 180px; display: inline-block;">رقم اعتماد مجلس الضمان الصحي</span>
+                    <strong>CHI CODE</strong><br/>
+                    <strong>رقم اعتماد مجلس الضمان الصحي</strong>
+                    <div t-field="o.partner_id.cchi"/>
                 </div>
             </div>
+
         </xpath>
-
     </template>
 </odoo>
