@@ -7,10 +7,11 @@
 
             <!-- إضافة الحقول بعد Reference -->
             <xpath expr="//field[@name='ref']" position="after">
-                <field name="nphies"/>
-                <field name="contract_no"/>
-                <field name="cchi"/>
-                <field name="region"/>
+                <field name="nphies" invisible="customer_rank > 0"/>
+                <field name="contract_no" invisible="customer_rank > 0"/>
+                <field name="cchi" invisible="customer_rank > 0"/>
+                <field name="provider_code" invisible="customer_rank > 0"/>
+                <field name="region" invisible="customer_rank > 0"/>
             </xpath>
             <xpath expr="//field[@name='region']" position="attributes">
                 <attribute name="required">[('company_type', '=', True)]</attribute>

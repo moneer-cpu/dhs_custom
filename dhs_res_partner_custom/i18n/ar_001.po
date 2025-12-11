@@ -6,22 +6,85 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 10:10+0000\n"
-"PO-Revision-Date: 2025-11-01 12:14+0200\n"
+"POT-Creation-Date: 2025-11-29 01:54+0000\n"
+"PO-Revision-Date: 2025-11-29 01:54+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Generator: Poedit 3.8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>CHI CODE</strong>"
+msgstr "‏<strong>رقم اعتماد مجلس الضمان الصحي</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>CLIENT REFERENCE</strong>"
+msgstr "‏<strong>رقم مرجع العميل</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>CONTACT NO.</strong>"
+msgstr "‏<strong>رقم التواصل</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>CONTACT PERSON</strong>"
+msgstr "<strong>الشخص المسؤول</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>CONTRACT REFERENCE</strong>"
+msgstr "<strong>اتفاقية مرجع</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>DHS CODE</strong>"
+msgstr "<strong>كود الشركة</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>DUE DATE</strong>"
+msgstr "‏<strong>تاريخ الاستحقاق</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>EMAIL ADDRESS</strong>"
+msgstr "<strong>عنوان البريد الالكتروني</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>INVOICE NO.</strong>"
+msgstr "‏<strong>رقم الفاتورة</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>LOCATION</strong>"
+msgstr "‏<strong>العنوان</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>NPHIES ID</strong>"
+msgstr "‏<strong>رقم نفيس</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>TO</strong>"
+msgstr "‏<strong>الى</strong>"
+
+#. module: dhs_res_partner_custom
+#: model_terms:ir.ui.view,arch_db:dhs_res_partner_custom.report_account_invoice_document_inherit
+msgid "<strong>VAT REGISTRATION NO.</strong>"
+msgstr "‏<strong>ضريبة القيمة المضافة الرقم الضريبي</strong>"
 
 #. module: dhs_res_partner_custom
 #: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_partner__cchi
 #: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_users__cchi
 msgid "CCHI"
-msgstr ""
+msgstr " "
 
 #. module: dhs_res_partner_custom
 #: model:ir.model.fields.selection,name:dhs_res_partner_custom.selection__res_partner__region__central

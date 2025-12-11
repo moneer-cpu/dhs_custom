@@ -1,0 +1,152 @@
+<odoo>
+    <template id="report_account_invoice_document_inherit" inherit_id="l10n_sa_edi.arabic_english_invoice">
+
+        <!-- Remove unwanted inherited blocks -->
+        <xpath expr="//t[@t-set='o']" position="replace"/>
+        <xpath expr="//t[@t-set='forced_vat']" position="replace"/>
+        <xpath expr="//t[@t-set='address']" position="replace"/>
+        <xpath expr="//div[@id='informations']" position="replace">
+            <div/>
+        </xpath>
+        <xpath expr="(//div[hasclass('col-4')])[1]" position="replace"/>
+        <xpath expr="(//div[hasclass('col-4')])[2]" position="attributes">
+            <attribute name="style">text-align:left</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('col-4') and hasclass('text-center')]" position="replace"/>
+        <xpath expr="//span[@t-if=&quot;o.move_type == 'out_invoice' and o.state == 'posted'&quot;]" position="replace">
+            <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">
+                <t t-if="o._l10n_sa_is_simplified()">
+                    فاتورة ضريبية مبسطة / SIMPLIFIED TAX INVOICE
+                </t>
+                <t t-else="">
+                    <strong>TAX INVOICE<br/>
+                            الفاتورة ضريبية
+                    </strong>
+                </t>
+            </span>
+        </xpath>
+
+
+        <!-- Custom header before table -->
+        <xpath expr="//table[contains(@class, 'table')]" position="before">
+
+            <table class="table o_main_table o_table_striped" style="width:100%; font-size:12px;">
+                <thead>
+                    <tr style="background-color:#C9C9C9; color:white;">
+                        <th style="width:50%; padding:6px;">Customer Details / بيانات العميل</th>
+                        <th style="width:50%; padding:6px;">Invoice Details / تفاصيل الفاتورة</th>
+                    </tr>
+                </thead>
+                <!-- Row 1 -->
+                <tr>
+                    <td style="padding:6px;">
+                        <strong>Provider Name / اسم المزود</strong>
+                        <br/>
+                        <span t-field="o.partner_id"/>
+                    </td>
+                    <td style="padding:6px;">
+                        <strong>Invoice Date / تاريخ الفاتورة</strong>
+                        <br/>
+                        <span t-field="o.invoice_date"/>
+                    </td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr>
+                    <td style="padding:6px;">
+                        <strong>Location / العنوان</strong>
+                        <br/>
+                        <div>
+                            <t t-esc="o.partner_id.street"/>
+                            <t t-if="o.partner_id.street2">,
+                                <t t-esc="o.partner_id.street2"/>
+                            </t>
+                            <t t-if="o.partner_id.city">,
+                                <t t-esc="o.partner_id.city"/>
+                            </t>
+                            <t t-if="o.partner_id.country_id">,
+                                <t t-esc="o.partner_id.country_id.name"/>
+                            </t>
+                        </div>
+                    </td>
+                    <td style="padding:6px;">
+                        <strong>Invoice Number / رقم الفاتورة</strong>
+                        <br/>
+                        <span t-field="o.name"/>
+                    </td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr>
+                    <td style="padding:6px;">
+                        <strong>Contact Person / الشخص المسؤول</strong>
+                        <br/>
+                        <span t-field="o.invoice_user_id"/>
+                    </td>
+                    <td style="padding:6px;">
+                        <strong>Client Reference / مرجع العميل</strong>
+                        <br/>
+                        <span t-field="o.partner_id.ref"/>
+                    </td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr>
+                    <td style="padding:6px;">
+                        <strong>Contact Number / رقم التواصل</strong>
+                        <br/>
+                        <span t-field="o.partner_id.phone"/>
+                    </td>
+                    <td style="padding:6px;">
+                        <strong>Due Date / تاريخ الاستحقاق</strong>
+                        <br/>
+                        <span t-field="o.invoice_date_due"/>
+                    </td>
+                </tr>
+
+                <!-- Row 5 -->
+                <tr>
+                    <td style="padding:6px;">
+                        <strong>Email / البريد الإلكتروني</strong>
+                        <br/>
+                        <span t-field="o.partner_id.email"/>
+                    </td>
+                    <td style="padding:6px;">
+                        <strong>Contract Reference / مرجع الاتفاقية</strong>
+                        <br/>
+                        <span t-field="o.partner_id.contract_no"/>
+                    </td>
+                </tr>
+
+                <!-- Row 6 -->
+                <tr>
+                    <td style="padding:6px;">
+                        <strong>VAT Registration / الرقم الضريبي</strong>
+                        <br/>
+                        <span t-field="o.partner_id.vat"/>
+                    </td>
+                    <td style="padding:6px;">
+                        <strong>NPHIES ID / رقم نفيس الموحد</strong>
+                        <br/>
+                        <span t-field="o.partner_id.nphies"/>
+                    </td>
+                </tr>
+
+                <!-- Row 7 -->
+                <tr>
+                    <td style="padding:6px;">
+                        <strong>DHS CODE / كود الشركة</strong>
+                        <br/>
+                        <!--                        <span t-field="o.company_id.dhs_code"/>-->
+                    </td>
+                    <td style="padding:6px;">
+                        <strong>CHI CODE / كود مجلس الضمان الصحي</strong>
+                        <br/>
+                        <span t-field="o.partner_id.cchi"/>
+                    </td>
+                </tr>
+            </table>
+        </xpath>
+    </template>
+
+</odoo>

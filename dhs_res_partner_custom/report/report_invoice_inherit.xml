@@ -1,0 +1,119 @@
+<odoo>
+    <template id="report_account_invoice_document_inherit" inherit_id="l10n_gcc_invoice.arabic_english_invoice">
+
+        <!-- Remove unwanted inherited blocks -->
+        <xpath expr="//t[@t-set='o']" position="replace"/>
+        <xpath expr="//t[@t-set='forced_vat']" position="replace"/>
+        <xpath expr="//t[@t-set='address']" position="replace"/>
+        <xpath expr="//div[@id='informations']" position="replace"><div/></xpath>
+        <xpath expr="(//div[hasclass('col-4')])[1]" position="replace"/>
+        <xpath expr="(//div[hasclass('col-4')])[2]" position="attributes">
+            <attribute name="style">text-align:left</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('col-4') and hasclass('text-center')]" position="replace"/>
+
+        <!-- Custom header before table -->
+        <xpath expr="//table[contains(@class, 'table')]" position="before">
+
+
+            <!-- TO -->
+            <div class="row mb-3">
+                <div>
+                    <strong>TO</strong><br/>
+                    <strong>إلى</strong>
+                    <div t-field="o.partner_id"/>
+                </div>
+            </div>
+
+            <!-- LOCATION + INVOICE NO -->
+            <div class="row mb-3">
+                <div class="col">
+                    <strong>LOCATION</strong><br/>
+                    <strong>العنوان</strong>
+                    <div>
+                        <t t-esc="o.partner_id.street"/>
+                        <t t-if="o.partner_id.street2">, <t t-esc="o.partner_id.street2"/></t>
+                        <t t-if="o.partner_id.city">, <t t-esc="o.partner_id.city"/></t>
+                        <t t-if="o.partner_id.country_id">, <t t-esc="o.partner_id.country_id.name"/></t>
+                    </div>
+                </div>
+                <div class="col">
+                    <strong>INVOICE NO.</strong><br/>
+                    <strong>رقم الفاتورة</strong>
+                    <div t-field="o.name"/>
+                </div>
+            </div>
+
+            <!-- CONTACT PERSON + CLIENT REFERENCE -->
+            <div class="row mb-3">
+                <div class="col">
+                    <strong>CONTACT PERSON</strong><br/>
+                    <strong>الشخص المسؤول</strong>
+                    <div t-field="o.invoice_user_id"/>
+                </div>
+                <div class="col">
+                    <strong>CLIENT REFERENCE</strong><br/>
+                    <strong>رقم مرجع العميل</strong>
+                    <div t-field="o.partner_id.ref"/>
+                </div>
+            </div>
+
+            <!-- CONTACT NO + DUE DATE -->
+            <div class="row mb-3">
+                <div class="col">
+                    <strong>CONTACT NO.</strong><br/>
+                    <strong>رقم التواصل</strong>
+                    <div t-field="o.partner_id.phone"/>
+                </div>
+                <div class="col">
+                    <strong>DUE DATE</strong><br/>
+                    <strong>تاريخ الاستحقاق</strong>
+                    <div t-field="o.invoice_date_due" t-options='{"widget": "date"}'/>
+                </div>
+            </div>
+
+            <!-- EMAIL + CONTRACT REFERENCE -->
+            <div class="row mb-3">
+                <div class="col">
+                    <strong>EMAIL ADDRESS</strong><br/>
+                    <strong>عنوان البريد الالكتروني</strong>
+                    <div t-field="o.partner_id.email"/>
+                </div>
+                <div class="col">
+                    <strong>CONTRACT REFERENCE</strong><br/>
+                    <strong>اتفاقية مرجع</strong>
+                    <div t-field="o.partner_id.contract_no"/>
+                </div>
+            </div>
+
+            <!-- VAT + DHS CODE -->
+            <div class="row mb-3">
+                <div class="col">
+                    <strong>VAT REGISTRATION NO.</strong><br/>
+                    <strong>الرقم الضريبي</strong>
+                    <div t-field="o.partner_id.vat"/>
+                </div>
+                <div class="col">
+                    <strong>DHS CODE</strong><br/>
+                    <strong>كود الشركة</strong>
+<!--                    <div t-field="o.partner_id.dhs_code"/>-->
+                </div>
+            </div>
+
+            <!-- NPHIES + CHI CODE -->
+            <div class="row mb-3">
+                <div class="col">
+                    <strong>NPHIES ID</strong><br/>
+                    <strong>رقم نفيس</strong>
+                    <div t-field="o.partner_id.nphies"/>
+                </div>
+                <div class="col">
+                    <strong>CHI CODE</strong><br/>
+                    <strong>رقم اعتماد مجلس الضمان الصحي</strong>
+                    <div t-field="o.partner_id.cchi"/>
+                </div>
+            </div>
+
+        </xpath>
+    </template>
+</odoo>
