@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <xpath expr="//search" position="inside">
                 <!-- Add CCHI Code -->
-                <field name="cchi" string="CCHI Code"/>
+                <field name="cchi" string="CCHI"/>
 
                 <!-- Add NPHIES Number -->
                 <field name="nphies" string="NPHIES No"/>
