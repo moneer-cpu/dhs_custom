@@ -1,0 +1,60 @@
+<!-- views/hr_employee_view.xml -->
+<odoo>
+    <data>
+
+        <!-- Inherit the main employee form -->
+        <record id="view_employee_form_custom_eg" model="ir.ui.view">
+            <field name="name">hr.employee.form.custom.eg</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <!-- 1) Place employee_code under employee name, styled like job position -->
+                <xpath expr="//div[contains(@class, 'oe_title') and contains(@class, 'mw-75')]" position="inside">
+                    <h2>
+                        <field name="employee_code" class="oe_title mw-75 ps-0 pe-2" placeholder="Employee's Code"/>
+                    </h2>
+                </xpath>
+
+                <xpath expr="//sheet//notebook//page//group//field[@name='gender']" position="after">
+                    <field name="religion"/>
+                </xpath>
+
+                <!-- 2) Add kinship under Emergency group, after emergency_phone -->
+                <!-- Odoo default fields: emergency_contact, emergency_phone -->
+                <xpath expr="//field[@name='emergency_phone']" position="after">
+                    <field name="kinship"/>
+                </xpath>
+
+                <!-- 3) Remove the Work Permit group -->
+                <!-- Target group containing permit_no (common in the Work Permit section) -->
+                <xpath expr="//sheet//group//group//separator[@name='has_work_permit']" position="replace">
+                </xpath>
+
+                <xpath expr="//sheet//group//group//field[@name='visa_no']" position="replace">
+                </xpath>
+
+                <xpath expr="//sheet//group//group//field[@name='permit_no']" position="replace">
+                </xpath>
+
+                <xpath expr="//sheet//group//group//field[@name='visa_expire']" position="replace">
+                </xpath>
+
+                <xpath expr="//sheet//group//group//field[@name='work_permit_expiration_date']" position="replace">
+                </xpath>
+
+                <xpath expr="//sheet//group//group//field[@name='work_permit_name']" position="replace">
+                </xpath>
+
+                <xpath expr="//sheet//group//group//field[@name='has_work_permit']" position="replace">
+                </xpath>
+
+
+
+
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

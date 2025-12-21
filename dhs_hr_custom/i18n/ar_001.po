@@ -1,0 +1,96 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dhs_hr_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-18 15:40+0000\n"
+"PO-Revision-Date: 2025-12-18 17:42+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: dhs_hr_custom
+#: model:ir.model.fields.selection,name:dhs_hr_custom.selection__hr_employee__certificate__bachelor
+msgid "Bachelor"
+msgstr "البكالوريوس"
+
+#. module: dhs_hr_custom
+#: model:ir.model.fields,field_description:dhs_hr_custom.field_hr_employee__certificate
+msgid "Certificate Level"
+msgstr "مستوى الشهادة"
+
+#. module: dhs_hr_custom
+#: model:ir.model.fields.selection,name:dhs_hr_custom.selection__hr_employee__religion__christianity
+msgid "Christianity"
+msgstr "المسيحية"
+
+#. module: dhs_hr_custom
+#: model:ir.model,name:dhs_hr_custom.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: dhs_hr_custom
+#: model:ir.model.fields,field_description:dhs_hr_custom.field_hr_employee__employee_code
+msgid "Employee Code"
+msgstr "رمز الموظف"
+
+#. module: dhs_hr_custom
+#: model_terms:ir.ui.view,arch_db:dhs_hr_custom.view_employee_form_custom_eg
+msgid "Employee's Code"
+msgstr "رمز الموظف"
+
+#. module: dhs_hr_custom
+#: model:ir.model.fields.selection,name:dhs_hr_custom.selection__hr_employee__religion__islam
+msgid "Islam"
+msgstr "الإسلام"
+
+#. module: dhs_hr_custom
+#: model:ir.model.fields,field_description:dhs_hr_custom.field_hr_employee__kinship
+msgid "Kinship"
+msgstr "صلة القرابة"
+
+#. module: dhs_hr_custom
+#: model:ir.model.fields.selection,name:dhs_hr_custom.selection__hr_employee__certificate__master
+msgid "Master"
+msgstr "ماجستير"
+
+#. module: dhs_hr_custom
+#: model:ir.model.fields.selection,name:dhs_hr_custom.selection__hr_employee__certificate__other
+#: model:ir.model.fields.selection,name:dhs_hr_custom.selection__hr_employee__religion__other
+msgid "Other"
+msgstr "غير ذلك"
+
+#. module: dhs_hr_custom
+#: model:ir.model.fields.selection,name:dhs_hr_custom.selection__hr_employee__certificate__phd
+msgid "Phd"
+msgstr "دكتوراه"
+
+#. module: dhs_hr_custom
+#: model:ir.model.fields,field_description:dhs_hr_custom.field_hr_employee__religion
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: dhs_hr_custom
+#: model:ir.model.fields.selection,name:dhs_hr_custom.selection__hr_employee__certificate__secondary
+msgid "Secondary"
+msgstr "ثانوي"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee__certificate
+#: model:ir.model.fields,field_description:hr.field_res_users__certificate
+msgid "Certificate Level"
+msgstr "المؤهل"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee__study_field
+#: model:ir.model.fields,field_description:hr.field_res_users__study_field
+msgid "Field of Study"
+msgstr "التخصص"
