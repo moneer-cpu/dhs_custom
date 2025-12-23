@@ -1,5 +1,5 @@
 <odoo>
-    <template id="external_layout_boxed_custom" inherit_id="web.external_layout_striped">
+    <template id="external_layout_striped_custom" inherit_id="web.external_layout_striped">
 
         <!-- ✅ Replace HEADER correctly -->
         <xpath expr="//div[contains(@t-attf-class, 'header')]" position="replace">
@@ -70,7 +70,7 @@
                                     font-size:10pt;
                                     padding-right:20px;
                                     top:-60px; ">
-                    <div class="flex-grow-1 me-2 text-start" t-field="company.report_footer"/>
+                    <div class="text-start" t-field="company.report_footer" />
                 </div>
 
             </div>

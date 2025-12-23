@@ -1,8 +1,10 @@
 table.o_main_table th {
-    font-weight: 700 !important;
+    font-weight: 900 !important;
     font-family: "Montserrat", "Somar", sans-serif !important;
     background-color: #008080 !important;
     color: white !important;
+    font-size: 16px !important;
+    padding: 8px !important;
 }
 
 table.o_main_table td {

@@ -1,5 +1,5 @@
 <odoo>
-    <template id="report_account_invoice_document_inherit" inherit_id="l10n_sa_edi.arabic_english_invoice">
+    <template id="report_account_invoice_document_inherit" inherit_id="l10n_gcc_invoice.arabic_english_invoice">
 
         <!-- Remove unwanted inherited blocks -->
         <xpath expr="//t[@t-set='o']" position="replace"/>
@@ -15,14 +15,10 @@
         <xpath expr="//div[hasclass('col-4') and hasclass('text-center')]" position="replace"/>
         <xpath expr="//span[@t-if=&quot;o.move_type == 'out_invoice' and o.state == 'posted'&quot;]" position="replace">
             <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">
-                <t t-if="o._l10n_sa_is_simplified()">
-                    فاتورة ضريبية مبسطة / SIMPLIFIED TAX INVOICE
-                </t>
-                <t t-else="">
-                    <strong>TAX INVOICE<br/>
-                            الفاتورة ضريبية
-                    </strong>
-                </t>
+                <strong>TAX INVOICE
+                    <br/>
+                    الفاتورة ضريبية
+                </strong>
             </span>
         </xpath>
 
@@ -30,21 +26,21 @@
         <!-- Custom header before table -->
         <xpath expr="//table[contains(@class, 'table')]" position="before">
 
-            <table class="table o_main_table o_table_striped" style="width:100%; font-size:12px;">
+            <table class="table o_main_table o_table_striped">
                 <thead>
-                    <tr style="background-color:#C9C9C9; color:white;">
-                        <th style="width:50%; padding:6px;">Customer Details / بيانات العميل</th>
-                        <th style="width:50%; padding:6px;">Invoice Details / تفاصيل الفاتورة</th>
+                    <tr>
+                        <th>Customer Details / بيانات العميل</th>
+                        <th>Invoice Details / تفاصيل الفاتورة</th>
                     </tr>
                 </thead>
                 <!-- Row 1 -->
                 <tr>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>Provider Name / اسم المزود</strong>
                         <br/>
                         <span t-field="o.partner_id"/>
                     </td>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>Invoice Date / تاريخ الفاتورة</strong>
                         <br/>
                         <span t-field="o.invoice_date"/>
@@ -53,7 +49,7 @@
 
                 <!-- Row 2 -->
                 <tr>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>Location / العنوان</strong>
                         <br/>
                         <div>
@@ -69,7 +65,7 @@
                             </t>
                         </div>
                     </td>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>Invoice Number / رقم الفاتورة</strong>
                         <br/>
                         <span t-field="o.name"/>
@@ -78,12 +74,12 @@
 
                 <!-- Row 3 -->
                 <tr>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>Contact Person / الشخص المسؤول</strong>
                         <br/>
                         <span t-field="o.invoice_user_id"/>
                     </td>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>Client Reference / مرجع العميل</strong>
                         <br/>
                         <span t-field="o.partner_id.ref"/>
@@ -92,12 +88,12 @@
 
                 <!-- Row 4 -->
                 <tr>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>Contact Number / رقم التواصل</strong>
                         <br/>
                         <span t-field="o.partner_id.phone"/>
                     </td>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>Due Date / تاريخ الاستحقاق</strong>
                         <br/>
                         <span t-field="o.invoice_date_due"/>
@@ -106,12 +102,12 @@
 
                 <!-- Row 5 -->
                 <tr>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>Email / البريد الإلكتروني</strong>
                         <br/>
                         <span t-field="o.partner_id.email"/>
                     </td>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>Contract Reference / مرجع الاتفاقية</strong>
                         <br/>
                         <span t-field="o.partner_id.contract_no"/>
@@ -120,12 +116,12 @@
 
                 <!-- Row 6 -->
                 <tr>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>VAT Registration / الرقم الضريبي</strong>
                         <br/>
                         <span t-field="o.partner_id.vat"/>
                     </td>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>NPHIES ID / رقم نفيس الموحد</strong>
                         <br/>
                         <span t-field="o.partner_id.nphies"/>
@@ -134,18 +130,148 @@
 
                 <!-- Row 7 -->
                 <tr>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>DHS CODE / كود الشركة</strong>
                         <br/>
                         <!--                        <span t-field="o.company_id.dhs_code"/>-->
                     </td>
-                    <td style="padding:6px;">
+                    <td>
                         <strong>CHI CODE / كود مجلس الضمان الصحي</strong>
                         <br/>
                         <span t-field="o.partner_id.cchi"/>
                     </td>
                 </tr>
             </table>
+        </xpath>
+        <xpath expr="//div[@name='incoterm']" position="after"> <!-- Title Row with Table Style -->
+            <table class="table o_main_table o_table_striped" name="bank_details_title">
+                <thead>
+                    <tr>
+                        <th class="text-start">Banking Details</th>
+                        <th class="text-end">تفاصيل البنك</th>
+                    </tr>
+                </thead>
+            </table> <!-- Normal Content -->
+            <div class="row" name="bank_details_content">
+                <div class="col-6">Beneficiary’s Name: Digital Healthcare Solutions Arabia
+                    <br/>
+                    Bank: Arab National Bank
+                    <br/>
+                    Account NO: 0108 0572 3427 0014
+                    <br/>
+                    IBAN NO: SA88 3040 0108 0572 3427 0014
+                    <br/>
+                    <strong>Please include the invoice number in the Transfer reference.</strong>
+                    <br/>
+                    Email: invoices_contracts@dhsarabia.com
+                    <br/>
+                    Tel: +966 920000958 | Fax: +966 11 494 4366
+                    <br/>
+                    C.R. No.: 1010255175 | VAT No.: 300733754000003
+                    <br/>
+                    Website: www.dhsarabia.com
+                    <br/>
+                    Paid Capital: 5,000,000 SAR
+                </div>
+                <div class="col-6 text-end">اسم المستفيد: ديجيتال هيلث كير سوليوشنز العربية
+                    <br/>
+                    البنك: البنك العربي الوطني
+                    <br/>
+                    رقم الحساب: 0108 0572 3427 0014
+                    <br/>
+                    رقم الآيبان: SA88 3040 0108 0572 3427 0014
+                    <br/>
+                    <strong>يرجى تضمين رقم الفاتورة في مرجع التحويل.</strong>
+                    <br/>
+                    البريد الإلكتروني: invoices_contracts@dhsarabia.com
+                    <br/>
+                    هاتف: +966 920000958 | فاكس: +966 11 494 4366
+                    <br/>
+                    السجل التجاري: 1010255175 | الرقم الضريبي: 300733754000003
+                    <br/>
+                    الموقع الإلكتروني: www.dhsarabia.com
+                    <br/>
+                    رأس المال المدفوع: 5,000,000 ريال سعودي
+                </div>
+            </div>
+            <table class="table o_main_table o_table_striped" name="terms_title">
+                <thead>
+                    <tr>
+                        <th class="text-start">Terms &amp; Conditions</th>
+                        <th class="text-end">الشروط والأحكام</th>
+                    </tr>
+                </thead>
+            </table> <!-- Normal Content -->
+            <div class="row" name="terms_content">
+                <div class="col-6">
+                    <strong>1 - Payment Obligation:</strong>
+                    <br/>
+                    The customer must settle the payable amount within 15 days of invoice issuance.
+                    <br/>
+                    <br/>
+                    <strong>2 - Payment Methods:</strong>
+                    <br/>
+                    - SADAD Service (not yet activated)
+                    <br/>
+                    - Certified Bank Cheque
+                    <br/>
+                    - Bank Transfer (include invoice number in reference)
+                    <br/>
+                    <br/>
+                    <strong>3 - Invoice Inquiry / Objection:</strong>
+                    <br/>
+                    Any inquiry or objection must be sent within 7 days to invoices_contracts@dhsarabia.com.
+                    <br/>
+                    <br/>
+                    <strong>4 - Lost Invoice:</strong>
+                    <br/>
+                    A replacement copy can be requested via invoices_contracts@dhsarabia.com.
+                    <br/>
+                    <br/>
+                    <strong>5 - Data Update:</strong>
+                    <br/>
+                    Notify changes in provider info at least 5 business days before effective date.
+                    <br/>
+                    <br/>
+                    <strong>6 - Suggestions &amp; Complaints:</strong>
+                    <br/>
+                    Contact Customer Care at 920000958 or CCC@dhsarabia.com.
+                </div>
+                <div class="col-6 text-end">
+                    <strong>١ - استحقاق الدفع:</strong>
+                    <br/>
+                    يجب على العميل سداد المبلغ خلال ١٥ يوماً من تاريخ إصدار الفاتورة.
+                    <br/>
+                    <br/>
+                    <strong>٢ - طرق السداد:</strong>
+                    <br/>
+                    - خدمة سداد (لم تُفعّل بعد)
+                    <br/>
+                    - شيك بنكي مصدّق
+                    <br/>
+                    - تحويل مصرفي (تضمين رقم الفاتورة في مرجع التحويل)
+                    <br/>
+                    <br/>
+                    <strong>٣ - الاستفسار / الاعتراض:</strong>
+                    <br/>
+                    يجب إرسال أي استفسار أو اعتراض خلال ٧ أيام إلى invoices_contracts@dhsarabia.com.
+                    <br/>
+                    <br/>
+                    <strong>٤ - فقدان الفاتورة:</strong>
+                    <br/>
+                    يمكن طلب نسخة جديدة عبر invoices_contracts@dhsarabia.com.
+                    <br/>
+                    <br/>
+                    <strong>٥ - تغيير البيانات:</strong>
+                    <br/>
+                    يجب إشعارنا بأي تغيير قبل ٥ أيام عمل على الأقل.
+                    <br/>
+                    <br/>
+                    <strong>٦ - الاقتراحات والشكاوى:</strong>
+                    <br/>
+                    التواصل مع خدمة العملاء على ٩٢٠٠٠٠٩٥٨ أو البريد CCC@dhsarabia.com.
+                </div>
+            </div>
         </xpath>
     </template>
 
