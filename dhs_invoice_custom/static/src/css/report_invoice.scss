@@ -1,27 +1,7 @@
-table.o_main_table th {
-    font-weight: 900 !important;
-    font-family: "Montserrat", "Somar", sans-serif !important;
-    background-color: #008080 !important;
-    color: white !important;
-    font-size: 16px !important;
-    padding: 8px !important;
-}
-
-table.o_main_table td {
-    font-family: "Montserrat", "Somar", sans-serif !important;
-    font-size: 12px !important;
-    padding: 6px !important;
-}
-
-
-table.o_main_table tr:first-child th {
-    font-size: 14px !important;
-}
 
 .o_table_striped {
     table:not(.o_ignore_layout_styling) {
         tr:not(:first-child) {
-            // Using border-top not bottom, to manage a different border on line sections
             border-top: $border-width solid $gray-200;
         }
 
@@ -43,3 +23,19 @@ table.o_main_table tr:first-child th {
             }
         }
     }
+}  /* ✅ close here */
+
+.o_report_text {
+    font-family: "Montserrat", "Somar", sans-serif !important;
+    color: #008080 !important;
+    font-size: 10pt !important;
+}
+
+.table-borderless {
+    tbody, thead, tfoot, tr, td, th {
+        border: 0 none !important;
+    }
+    > :not(:first-child) {
+        border-top-style: none !important;
+    }
+}

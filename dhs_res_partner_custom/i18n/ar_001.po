@@ -80,11 +80,6 @@ msgstr "‏<strong>الى</strong>"
 msgid "<strong>VAT REGISTRATION NO.</strong>"
 msgstr "‏<strong>ضريبة القيمة المضافة الرقم الضريبي</strong>"
 
-#. module: dhs_res_partner_custom
-#: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_partner__cchi
-#: model:ir.model.fields,field_description:dhs_res_partner_custom.field_res_users__cchi
-msgid "CCHI"
-msgstr " "
 
 #. module: dhs_res_partner_custom
 #: model:ir.model.fields.selection,name:dhs_res_partner_custom.selection__res_partner__region__central

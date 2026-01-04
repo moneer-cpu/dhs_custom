@@ -1,4 +1,6 @@
 from odoo import models, fields, api
+import re
+
 
 class ResPartner(models.Model):
     _inherit = 'res.partner'
@@ -14,6 +16,30 @@ class ResPartner(models.Model):
         ('eastern', 'Eastern region'),
         ('southern', 'Southern Region'),
     ], string="Region")
+
+    @api.depends('complete_name', 'email', 'vat', 'state_id', 'country_id', 'commercial_company_name', 'cchi')
+    @api.depends_context('show_address', 'partner_show_db_id', 'address_inline', 'show_email', 'show_vat', 'show_cchi', 'lang')
+    def _compute_display_name(self):
+        for partner in self:
+            name = partner.with_context(lang=self.env.lang)._get_complete_name()
+            if partner._context.get('show_address'):
+                name = name + "\n" + partner._display_address(without_company=True)
+            name = re.sub(r'\s+\n', '\n', name)
+            if partner._context.get('partner_show_db_id'):
+                name = f"{name} ({partner.id})"
+            if partner._context.get('address_inline'):
+                splitted_names = name.split("\n")
+                name = ", ".join([n for n in splitted_names if n.strip()])
+            if partner._context.get('show_email') and partner.email:
+                name = f"{name} <{partner.email}>"
+            if partner._context.get('show_vat') and partner.vat:
+                name = f"{name} ‒ {partner.vat}"
+            # ✅ Add cchi field
+            if partner._context.get('show_cchi') and partner.cchi:
+                name = f"{name} ‒ {partner.cchi}"
+
+            partner.display_name = name.strip()
+
 
 
 

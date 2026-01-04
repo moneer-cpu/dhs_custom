@@ -13,9 +13,6 @@
                 <field name="provider_code" invisible="supplier_rank > 0"/>
                 <field name="region" invisible="supplier_rank > 0"/>
             </xpath>
-            <xpath expr="//field[@name='region']" position="attributes">
-                <attribute name="required">[('company_type', '=', True)]</attribute>
-            </xpath>
         </field>
     </record>
 </odoo>

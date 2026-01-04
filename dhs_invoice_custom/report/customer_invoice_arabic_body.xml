@@ -14,9 +14,10 @@
         </xpath>
         <xpath expr="//div[hasclass('col-4') and hasclass('text-center')]" position="replace"/>
         <xpath expr="//span[@t-if=&quot;o.move_type == 'out_invoice' and o.state == 'posted'&quot;]" position="replace">
-            <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">
-                <strong>TAX INVOICE
-                    <br/>
+            <span class="text-start o_report_text" t-if="o.move_type == 'out_invoice' and o.state == 'posted'">
+                <strong>
+                    TAX INVOICE
+                    /
                     الفاتورة ضريبية
                 </strong>
             </span>
@@ -26,7 +27,7 @@
         <!-- Custom header before table -->
         <xpath expr="//table[contains(@class, 'table')]" position="before">
 
-            <table class="table o_main_table o_table_striped">
+            <table class="table o_main_table o_table_striped table-borderless">
                 <thead>
                     <tr>
                         <th>Customer Details / بيانات العميل</th>
@@ -143,135 +144,76 @@
                 </tr>
             </table>
         </xpath>
-        <xpath expr="//div[@name='incoterm']" position="after"> <!-- Title Row with Table Style -->
-            <table class="table o_main_table o_table_striped" name="bank_details_title">
+        <xpath expr="//table[@name='invoice_line_table']/thead/tr" position="before">
+            <tr>
+                <th colspan="7" class="text-start fw-bold">Invoice Items/بنود الفاتورة</th>
+            </tr>
+        </xpath>
+        <xpath expr="//p[@name='payment_term' and @t-if='o.invoice_payment_term_id']" position="after">
+            <table class="table o_main_table o_table_striped table-borderless" name="bank_details_title">
                 <thead>
                     <tr>
                         <th class="text-start">Banking Details</th>
                         <th class="text-end">تفاصيل البنك</th>
                     </tr>
                 </thead>
-            </table> <!-- Normal Content -->
+            </table>
             <div class="row" name="bank_details_content">
-                <div class="col-6">Beneficiary’s Name: Digital Healthcare Solutions Arabia
-                    <br/>
-                    Bank: Arab National Bank
-                    <br/>
-                    Account NO: 0108 0572 3427 0014
-                    <br/>
-                    IBAN NO: SA88 3040 0108 0572 3427 0014
-                    <br/>
+                <!-- English side -->
+                <div class="col-6">
+                    <t t-foreach="o.company_id.partner_id.bank_ids" t-as="bank">
+                        Beneficiary’s Name:
+                        <t t-esc="o.company_id.partner_id.name"/>
+                        <br/>
+                        Bank:
+                        <t t-esc="bank.bank_id.name"/>
+                        <br/>
+                        Account NO:
+                        <t t-esc="bank.acc_number"/>
+                        <br/>
+                        <!--                        IBAN NO:-->
+                        <!--                        <t t-esc="bank.iban"/>-->
+                        <!--                        <br/>-->
+                    </t>
                     <strong>Please include the invoice number in the Transfer reference.</strong>
                     <br/>
-                    Email: invoices_contracts@dhsarabia.com
-                    <br/>
-                    Tel: +966 920000958 | Fax: +966 11 494 4366
-                    <br/>
-                    C.R. No.: 1010255175 | VAT No.: 300733754000003
-                    <br/>
-                    Website: www.dhsarabia.com
-                    <br/>
-                    Paid Capital: 5,000,000 SAR
+                    Email:
+                    <t t-esc="o.company_id.partner_id.email"/>
                 </div>
-                <div class="col-6 text-end">اسم المستفيد: ديجيتال هيلث كير سوليوشنز العربية
-                    <br/>
-                    البنك: البنك العربي الوطني
-                    <br/>
-                    رقم الحساب: 0108 0572 3427 0014
-                    <br/>
-                    رقم الآيبان: SA88 3040 0108 0572 3427 0014
-                    <br/>
+
+                <!-- Arabic side -->
+                <div class="col-6 text-end">
+                    <t t-foreach="o.company_id.partner_id.bank_ids" t-as="bank">
+                        <t t-esc="o.company_id.partner_id.name"/>
+                        :اسم المستفيد
+                        <br/>
+                        <t t-esc="bank.bank_id.name"/>
+                        :البنك
+                        <br/>
+                        رقم الحساب:
+                        <t t-esc="bank.acc_number"/>
+                        <br/>
+                        <!--                        رقم الآيبان:-->
+                        <!--                        <t t-esc="bank.iban"/>-->
+                        <!--                        <br/>-->
+                    </t>
                     <strong>يرجى تضمين رقم الفاتورة في مرجع التحويل.</strong>
                     <br/>
-                    البريد الإلكتروني: invoices_contracts@dhsarabia.com
-                    <br/>
-                    هاتف: +966 920000958 | فاكس: +966 11 494 4366
-                    <br/>
-                    السجل التجاري: 1010255175 | الرقم الضريبي: 300733754000003
-                    <br/>
-                    الموقع الإلكتروني: www.dhsarabia.com
-                    <br/>
-                    رأس المال المدفوع: 5,000,000 ريال سعودي
+                    <t t-esc="o.company_id.partner_id.email"/>
+                    :البريد الإلكتروني
                 </div>
             </div>
-            <table class="table o_main_table o_table_striped" name="terms_title">
+
+        </xpath>
+        <xpath expr="//p[@name='comment' and @t-if='o.narration']" position="before">
+            <table class="table o_main_table o_table_striped table-borderless" name="terms_title">
                 <thead>
                     <tr>
                         <th class="text-start">Terms &amp; Conditions</th>
                         <th class="text-end">الشروط والأحكام</th>
                     </tr>
                 </thead>
-            </table> <!-- Normal Content -->
-            <div class="row" name="terms_content">
-                <div class="col-6">
-                    <strong>1 - Payment Obligation:</strong>
-                    <br/>
-                    The customer must settle the payable amount within 15 days of invoice issuance.
-                    <br/>
-                    <br/>
-                    <strong>2 - Payment Methods:</strong>
-                    <br/>
-                    - SADAD Service (not yet activated)
-                    <br/>
-                    - Certified Bank Cheque
-                    <br/>
-                    - Bank Transfer (include invoice number in reference)
-                    <br/>
-                    <br/>
-                    <strong>3 - Invoice Inquiry / Objection:</strong>
-                    <br/>
-                    Any inquiry or objection must be sent within 7 days to invoices_contracts@dhsarabia.com.
-                    <br/>
-                    <br/>
-                    <strong>4 - Lost Invoice:</strong>
-                    <br/>
-                    A replacement copy can be requested via invoices_contracts@dhsarabia.com.
-                    <br/>
-                    <br/>
-                    <strong>5 - Data Update:</strong>
-                    <br/>
-                    Notify changes in provider info at least 5 business days before effective date.
-                    <br/>
-                    <br/>
-                    <strong>6 - Suggestions &amp; Complaints:</strong>
-                    <br/>
-                    Contact Customer Care at 920000958 or CCC@dhsarabia.com.
-                </div>
-                <div class="col-6 text-end">
-                    <strong>١ - استحقاق الدفع:</strong>
-                    <br/>
-                    يجب على العميل سداد المبلغ خلال ١٥ يوماً من تاريخ إصدار الفاتورة.
-                    <br/>
-                    <br/>
-                    <strong>٢ - طرق السداد:</strong>
-                    <br/>
-                    - خدمة سداد (لم تُفعّل بعد)
-                    <br/>
-                    - شيك بنكي مصدّق
-                    <br/>
-                    - تحويل مصرفي (تضمين رقم الفاتورة في مرجع التحويل)
-                    <br/>
-                    <br/>
-                    <strong>٣ - الاستفسار / الاعتراض:</strong>
-                    <br/>
-                    يجب إرسال أي استفسار أو اعتراض خلال ٧ أيام إلى invoices_contracts@dhsarabia.com.
-                    <br/>
-                    <br/>
-                    <strong>٤ - فقدان الفاتورة:</strong>
-                    <br/>
-                    يمكن طلب نسخة جديدة عبر invoices_contracts@dhsarabia.com.
-                    <br/>
-                    <br/>
-                    <strong>٥ - تغيير البيانات:</strong>
-                    <br/>
-                    يجب إشعارنا بأي تغيير قبل ٥ أيام عمل على الأقل.
-                    <br/>
-                    <br/>
-                    <strong>٦ - الاقتراحات والشكاوى:</strong>
-                    <br/>
-                    التواصل مع خدمة العملاء على ٩٢٠٠٠٠٩٥٨ أو البريد CCC@dhsarabia.com.
-                </div>
-            </div>
+            </table>
         </xpath>
     </template>
 
