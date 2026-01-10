@@ -30,7 +30,7 @@
         <!-- FOOTER -->
         <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="replace">
             <div t-attf-class="footer o_company_#{company.id}_layout {{report_type != 'pdf' and 'mt-auto'}}"
-                dir="rtl" style="position:relative; height:90px;">
+                style="position:relative; height:90px; direction: ltr;">
 
                 <!-- Background -->
                 <div style=" background-image: url('/dhs_invoice_custom/static/src/img/heartbeat_footer.png');
