@@ -3,7 +3,7 @@
 
         <!-- HEADER -->
         <xpath expr="//div[contains(@t-attf-class, 'header')]" position="replace">
-            <div t-attf-class="header o_company_#{company.id}_layout" dir="rtl">
+            <div t-attf-class="header o_company_#{company.id}_layout">
                 <div class="row mb8 align-items-center">
 
                     <!-- Left: Company Logo + Name -->
@@ -30,7 +30,7 @@
         <!-- FOOTER -->
         <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="replace">
             <div t-attf-class="footer o_company_#{company.id}_layout {{report_type != 'pdf' and 'mt-auto'}}"
-                style="position:relative; height:90px; direction: ltr;">
+                style="position:relative; height:90px;">
 
                 <!-- Background -->
                 <div style=" background-image: url('/dhs_invoice_custom/static/src/img/heartbeat_footer.png');
