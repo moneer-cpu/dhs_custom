@@ -3,11 +3,11 @@
 
         <!-- HEADER -->
         <xpath expr="//div[contains(@t-attf-class, 'header')]" position="replace">
-            <div t-attf-class="header o_company_#{company.id}_layout">
+            <div t-attf-class="header o_company_#{company.id}_layout" t-att-dir="'ltr'">
                 <div class="row mb8 align-items-center">
 
                     <!-- Left: Company Logo + Name -->
-                    <div class="col-4">
+                    <div class="col-4 d-flex justify-content-start">
                         <img t-if="company.logo"
                              class="o_company_logo_big"
                              t-att-src="image_data_uri(company.logo)"
@@ -16,7 +16,7 @@
                     </div>
 
                     <!-- Right: Header Graphic -->
-                    <div class="col-8 text-end mb4">
+                    <div class="col-8 d-flex justify-content-end mb4"> <!-- changed from text-end -->
                         <img class="img-fluid"
                              t-att-src="'/dhs_invoice_custom/static/src/img/header_graphic.png'"
                              alt="Header Graphic"
@@ -30,35 +30,33 @@
         <!-- FOOTER -->
         <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="replace">
             <div t-attf-class="footer o_company_#{company.id}_layout {{report_type != 'pdf' and 'mt-auto'}}"
-                style="position:relative; height:90px;">
+                 t-att-dir="'ltr'"
+                 style="position:relative; height:90px;">
 
                 <!-- Background -->
-                <div style=" background-image: url('/dhs_invoice_custom/static/src/img/heartbeat_footer.png');
-                       background-repeat: no-repeat;
-                       background-size: 900px 90px;
-                       background-position:
-                       left bottom;
-                       position:absolute;
-                       bottom:-30px;
-                       left:0;
-                       width:100%;
-                       height:90px;
-                       opacity:0.8;
-                       z-index:0;">
-
+                <div style="background-image: url('/dhs_invoice_custom/static/src/img/heartbeat_footer.png');
+                            background-repeat: no-repeat;
+                            background-size: 900px 90px;
+                            background-position: left bottom;
+                            position:absolute;
+                            bottom:-30px;
+                            left:0;
+                            width:100%;
+                            height:90px;
+                            opacity:0.8;
+                            z-index:0;">
                 </div>
 
                 <!-- Page Number -->
-                <div class="text-end o_report_text"
-                     style="position:relative; z-index:10; padding-right:20px; bottom:-30px;">
-                    | P a g e
-                    <span class="page"/>
+                <div class="o_report_text"
+                     style="position:relative; z-index:10; padding-right:20px; bottom:-30px; text-align:right;">
+                    | P a g e <span class="page"/>
                 </div>
 
                 <!-- Footer Text -->
-                <div class="text-start o_report_text"
-                     style="position:absolute; z-index:20; padding-right:20px; font-size:9px;">
-                    <div class="text-start" t-field="company.report_footer"/>
+                <div class="o_report_text"
+                     style="position:absolute; z-index:20; padding-right:20px; font-size:9px; text-align:left;">
+                    <div t-field="company.report_footer"/>
                 </div>
 
             </div>
